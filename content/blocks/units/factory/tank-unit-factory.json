@@ -1,0 +1,35 @@
+{
+ "name": "Tank Unit Factory",
+ "description": "Build tank unit.",
+ "type": "UnitFactory",
+ "health": 120,
+ "size": 3,
+ "buildTime": 120,
+ "requirements": [
+		{ "item": "copper", "amount": 100},
+		{ "item": "lead", "amount": 80},
+		{ "item": "graphite", "amount": 60},
+		{ "item": "silicon", "amount": 60}
+   ],
+ "hasPower": true,
+ "hasItems": true,
+	"consumes": {
+		"power": 2
+	},
+	"plans": [
+		{
+    "unit": "tankt1-axion",
+    "requirements": [
+	{ "item": "silicon", "amount": 40},
+	{ "item": "titanium", "amount": 30}
+		],
+			"time": 1000,
+		},
+	],
+	"unitCapModifier": 0,
+	"research": {
+	"parent": "ground-factory",
+	"visible": true
+	},
+  	"category": "units",
+}

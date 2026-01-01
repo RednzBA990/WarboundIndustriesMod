@@ -1,0 +1,39 @@
+{
+ "name": "Support unit factory",
+ "description": "Build unit for supporting you.",
+ "type": "UnitFactory",
+ "health": 100,
+ "size": 3,
+ "buildTime": 120,
+ "requirements": [
+		{ "item": "copper", "amount": 100},
+		{ "item": "lead", "amount": 80},
+		{ "item": "graphite", "amount": 60}
+   ],
+ "hasPower": true,
+	"consumes": {
+		"power": 3
+	},
+
+	"plans": [
+	{
+    "unit": "node",
+    "requirements": [
+	{ "item": "lead", "amount": 40},
+	{ "item": "graphite", "amount": 25}
+		],
+			"time": 800,
+		},
+	],
+	"unitCapModifier": 0,
+	"research": {
+	"parent": "ground-factory",
+	"visible": true,
+	"requirements": [
+		  "copper/1400",
+		  "lead/1380",
+		  "graphite/1260"
+  ]
+},
+  "category": "units",
+	}
