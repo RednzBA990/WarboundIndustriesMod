@@ -1,0 +1,41 @@
+{
+    "type": "UnitCargoLoader",
+    "name": "Faster Cargo Drone Loader",
+    "description": "Constructs faster cargo drones. Fast fast fast!!",
+
+    "size": 2,
+    "health": 300,
+
+    "unitType": "surg",
+    "itemCapacity": 150,
+    "separateItemCapacity": true,
+    "requirements": 
+    [
+    	"thorium/300",
+    	"lead/300",
+		"silicon/200",
+		"graphite/180",
+		"surge-alloy/100"
+	],
+    "category": "distribution",
+
+    "buildTime": 400,
+
+    "hasItems": true,
+    "hasPower": true,
+    "hasLiquids": false,
+    "consumes":
+    {
+        "power": 3
+  }
+    research: {
+  parent: more-vanilla-copper-cargo-delivery-unload
+  requirements: [
+    thorium/1050
+    lead/1050
+    silicon/700
+    graphite/630
+    surge-alloy/350
+  ]
+}
+}
