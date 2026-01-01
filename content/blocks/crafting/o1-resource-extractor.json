@@ -1,0 +1,55 @@
+{	
+  "name": "Hard Resource Extractor",
+  "description": "Extract resource from everywhere using water.",
+  "type": "Separator",
+  "size": 3,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+    {
+    "type": "drawRegion",
+    "suffix": "-bottom"    
+    },
+  {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "water"
+  },
+  {
+    "type": "DrawDefault"
+  }
+    ]
+},
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"liquidCapacity": 30,
+	"itemCapacity": 30,
+	"craftTime": 2,
+	"craftEffect": "smeltsmoke",
+    "ambientSound": "techloop",
+    "ambientSoundVolume": 0.04,
+	"consumes": {
+		"power": 3,
+        "liquid": {
+			"liquid": "water",
+			"amount": 0.5
+		}
+	},
+	 "results": [
+		"copper/5",
+		"lead/4",
+		"graphite/3",
+		"silicon/3",
+		"thorium/3",
+		"titanium/3"
+    ],
+	"requirements": [
+        "lead/100",
+        "copper/100",    
+        "titanium/80",
+        "silicon/50",
+        "graphite/50"
+	],
+	"category": "crafting",
+	"research": "melter"
+}

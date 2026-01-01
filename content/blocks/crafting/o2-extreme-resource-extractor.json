@@ -1,0 +1,59 @@
+{	
+  "name": "Extreme Resource Extractor",
+  "description": "Extract resource from everywhere using water with Extreme Power.",
+  "type": "GenericCrafter",
+  "size": 4,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+    {
+    "type": "drawRegion",
+    "suffix": "-bottom"    
+    },
+  {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "water"
+  },
+  {
+    "type": "DrawDefault"
+  }
+    ]
+},
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"liquidCapacity": 90,
+	"itemCapacity": 70,
+	"craftTime": 70,
+	"craftEffect": "smeltsmoke",
+    "ambientSound": "techloop",
+    "ambientSoundVolume": 0.06,
+	"consumes": {
+		"power": 6,
+        "liquid": {
+			"liquid": "water",
+			"amount": 1.5
+		}
+	},
+	 "outputItems": [ 
+			{ "item": "copper", "amount": 8},
+			{ "item": "lead", "amount": 8},
+			{ "item": "graphite", "amount": 6},
+			{ "item": "metaglass", "amount": 6},
+			{ "item": "silicon", "amount": 5},
+			{ "item": "titanium", "amount": 6},
+			{ "item": "thorium", "amount": 5},
+			{ "item": "plastanium", "amount": 4}
+		 ],
+	"requirements": [
+        "lead/400",
+        "copper/300",    
+        "titanium/100",
+        "silicon/150",
+        "graphite/150",
+        "thorium/120",
+        "plastanium/100"
+	],
+	"category": "crafting",
+	"research": "more-vanilla-o1-resource-extractor"
+}
