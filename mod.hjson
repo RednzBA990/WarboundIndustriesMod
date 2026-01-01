@@ -1,0 +1,11 @@
+{
+  "name": "More-vanilla",
+  "repo": "RednzBA990/MoreVanillaMod",
+  "displayName": "More Vanilla+",
+  "subtitle": "First global release",
+  "author": "Rednz990 and Pirojok3000(code resource)",
+  "description": "Adds more serpulo unit and buildings to support your experience. Drone code from Pirojok3000 mod.\n\nI indonesian people btw :)",
+  "version": 1.6,
+  "minGameVersion": "147",
+  "hidden": false, 
+}
