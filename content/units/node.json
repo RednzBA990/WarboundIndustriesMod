@@ -1,0 +1,38 @@
+{
+    "name": "Node",
+    "description": "A small nano drone can helping you to built building.",
+    "flying": true,
+	"hitSize": 6,
+	"health": 80,
+	"mineRange": 70,
+	"mineTier": 4,
+	"mineSpeed": 4,
+	"buildRange": 70,
+	"buildSpeed": 1.5,
+	"itemCapacity": 40,
+	"speed": 3.2,
+	"rotateSpeed": 8,
+	"rotateShooting": true,
+	"canAttack": false,
+	"accel": 0.3,
+	"drag": 0.07,
+    "engineSize": 2,
+    "engineOffset": 5,
+    "isEnemy": false,
+    "abilities": [
+		{
+			"type": "RepairFieldAbility",
+			"amount": 1,
+			"reload": 100,
+			"range": 70
+		}
+	],
+    "research": {
+	"parent": "more-vanilla-support-unit-factory",
+	"visible": true,
+	"requirements": [
+		  "lead/400",
+		  "graphite/350"
+		]
+	}
+}
