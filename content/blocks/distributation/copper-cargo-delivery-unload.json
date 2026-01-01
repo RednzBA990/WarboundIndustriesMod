@@ -1,0 +1,32 @@
+{
+    "type": "UnitCargoUnloadPoint",
+    "name": "Copper Drone Unloading Point",
+    "description": "Acts as unloading point for cargo drones. Accepts items that match the selected filter.",
+
+    "size": 2,
+    "health": 120,
+
+    "itemCapacity": 100,
+    "liquidCapacity": 0,
+    "separateItemCapacity": true,
+    "requirements": 
+    [
+		"copper/100",
+		"lead/50"
+	],
+    "category": "distribution",
+
+    "hasItems": true,
+    "hasLiquids": false,
+    "outputsLiquid": false,
+    "outputItems": true,
+    "buildTime": 140,
+
+    research: {
+  parent: more-vanilla-copper-cargo-delivery-load
+  requirements: [
+    copper/350
+    lead/175
+  ]
+}
+}

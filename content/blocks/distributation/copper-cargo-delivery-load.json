@@ -1,0 +1,37 @@
+{
+    "type": "UnitCargoLoader",
+    "name": "Copper Cargo Drone Loader",
+    "description": "Constructs copper cargo drones. Drones automatically distribute items to Unloading Points with a matching filter",
+
+    "size": 2,
+    "health": 160,
+
+    "unitType": "caero",
+    "itemCapacity": 50,
+    "separateItemCapacity": true,
+    "requirements": 
+    [
+    	"copper/200",
+		"lead/180",
+		"graphite/150",
+	],
+    "category": "distribution",
+
+    "buildTime": 180,
+
+    "hasItems": true,
+    "hasPower": true,
+    "hasLiquids": false,
+    "consumes":
+    {
+        "power": 1
+  }
+    research: {
+  parent: titanium-conveyor
+  requirements: [
+    copper/700
+    lead/630
+    graphite/525
+  ]
+}
+}
