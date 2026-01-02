@@ -16,7 +16,7 @@ I will give you two interesting information from this mod.
 
 -First global release
 -added the 2nd version of the serpulo tank
--memperbaiki bug sprite dari fixed sprite bug from previous tank
+-fixed sprite bug from previous tank
 
 #1.5
 
