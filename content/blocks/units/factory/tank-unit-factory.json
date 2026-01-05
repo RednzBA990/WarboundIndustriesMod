@@ -1,6 +1,6 @@
 {
- "name": "Tank Unit Factory",
- "description": "Build tank unit.",
+ "name": "Modern Unit Factory",
+ "description": "Build tank dan helicopter unit.",
  "type": "UnitFactory",
  "health": 120,
  "size": 3,
@@ -23,8 +23,16 @@
 	{ "item": "silicon", "amount": 40},
 	{ "item": "titanium", "amount": 30}
 		],
-			"time": 1000,
+			"time": 1200,
 		},
+		{
+    "unit": "helit1-raptor",
+    "requirements": [
+	{ "item": "silicon", "amount": 40},
+	{ "item": "thorium", "amount": 30}
+		],
+			"time": 1380,
+		}
 	],
 	"unitCapModifier": 0,
 	"research": {
