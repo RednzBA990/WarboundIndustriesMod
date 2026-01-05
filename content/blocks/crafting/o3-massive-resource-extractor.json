@@ -1,0 +1,76 @@
+{	
+  "name": "Gigantic Massive Resource Extractor",
+  "description": "Extract resource from everywhere using water with massive power.",
+  "type": "GenericCrafter",
+  "size": 5,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+    {
+    "type": "drawRegion",
+    "suffix": "-bottom"    
+    },
+  {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "water"
+  },
+  {
+    "type": "DrawDefault"
+  },
+ {
+    "type": "DrawFlame",
+    "flameColor": "ffce9a",
+    "flameRadius": 6.5,         
+    "flameRadiusIn": 3.5,
+    "flameRadiusScl": 4.5,  
+    "flameRadiusMag": 3,    
+    "flameRadiusInMag": 2
+     	}
+    ]
+},
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"liquidCapacity": 200,
+	"itemCapacity": 200,
+	"craftTime": 60,
+	"buildTime": 3600,
+	"craftEffect": "smeltsmoke",
+    "ambientSound": "techloop",
+    "ambientSoundVolume": 0.12,
+	"consumes": {
+		"power": 8,
+        "liquid": {
+			"liquid": "water",
+			"amount": 2.5
+		}
+	},
+	 "outputItems": [ 
+			{ "item": "sand", "amount": 20},
+			{ "item": "scrap", "amount": 18},
+			{ "item": "coal", "amount": 16},
+			{ "item": "copper", "amount": 15},
+			{ "item": "lead", "amount": 15},
+			{ "item": "graphite", "amount": 10},
+			{ "item": "metaglass", "amount": 10},
+			{ "item": "titanium", "amount": 10},
+			{ "item": "silicon", "amount": 8},
+			{ "item": "thorium", "amount": 8},
+			{ "item": "plastanium", "amount": 8},
+			{ "item": "phase-fabric", "amount": 6},
+			{ "item": "surge-alloy", "amount": 5}
+		 ],
+	"requirements": [
+        "lead/1000",
+        "copper/700",    
+        "titanium/700",
+        "silicon/400",
+        "graphite/500",
+        "thorium/400",
+        "plastanium/350",
+        "phase-fabric/200",
+        "surge-alloy/150"
+	],
+	"category": "crafting",
+	"research": "more-vanilla-o2-extreme-resource-extractor"
+}
