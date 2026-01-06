@@ -57,61 +57,6 @@ weapons: [
 		}
 	}
 	{
-		name: helit2-rapier-rotator
-		reload: 360
-		range: 0
-		x: 0
-		y: 6.7
-		recoil: 0
-		shootSound: false
-		smokeEffect: false
-		shootEffect: false
-		ejectEffect: false
-		alwaysShooting: true
-		controllable: false
-		top: true
-		mirror: false
-		rotate: false
-		bullet: {
-			"type": "basicBulletType",
-			"width": 0,
-			"height": 0,
-			"hitSize": 0,
-			"hitEffect": false,
-			"explodeEffect": false,
-			"despawnEffect": false,
-			"smokeEffect": false,
-			"speed": 0,
-			"damage": 0,
-			"lifetime": 0
-		}
-		parts: [
-	{
-		"x": 0,
-		"y": 0,
-		"moveY": 0,
-		"moveRot": -6120,
-		"type": "regionPart",
-		"progress": "reload",
-		"followRotation": true,
-		"outline": false,
-		"suffix": "-rotor-blur",
-		"layer": 1000
-	},
-	{
-		"x": 0,
-		"y": 0,
-		"moveY": 0,
-		"moveRot": 0,
-		"type": "regionPart",
-		"followRotation": true,
-		"outline": false,
-		"suffix": "-top",
-		"layer": 1001
-	}
-		]
-	}
-	{
         "reload": 50,
         "top": true,
         "mirror": true,
@@ -136,7 +81,66 @@ weapons: [
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootSmallSmoke"
         }
-    }
+    },
+	{
+		name: helit2-rapier-rotator
+		reload: 360
+		range: 0
+		x: 0
+		y: 6.7
+		recoil: 0
+		shootSound: none
+		smokeEffect: none
+		shootEffect: none
+		ejectEffect: none
+		alwaysShooting: true
+		controllable: false
+		top: true
+		mirror: false
+		rotate: false
+		bullet: {
+			"type": "basicBulletType",
+			"width": 0,
+			"height": 0,
+			"hitSize": 0,
+			"createChance": 0,
+			"hitEffect": "none",
+			"explodeEffect": "none",
+			"despawnEffect": "none",
+			"shootEffect": "none",
+			"smokeEffect": "none",
+			"speed": 0,
+			"damage": 0,
+			"lifetime": 0
+		}
+		parts: [
+	{
+		"x": 0,
+		"y": 0,
+		"moveY": 0,
+		"moveRot": -6120,
+		"type": "regionPart",
+		"progress": "reload",
+		"followRotation": true,
+		"under": false,
+		"top": true,
+		"outline": false,
+		"suffix": "-rotor-blur"
+	},
+	{
+		"x": 0,
+		"y": 0,
+		"moveY": 0,
+		"moveRot": 0,
+		"type": "regionPart",
+		"followRotation": true,
+		"under": false,
+		"top": true,
+		"outline": false,
+		"suffix": "-top"
+	}
+		]
+	}
 ]
 "research": {
 		parent: more-vanilla-helit1-raptor

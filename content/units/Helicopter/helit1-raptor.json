@@ -42,10 +42,10 @@ weapons: [
 		x: 0
 		y: 0.1
 		recoil: 0
-		shootSound: false
-		smokeEffect: false
-		shootEffect: false
-		ejectEffect: false
+		shootSound: none
+		smokeEffect: none
+		shootEffect: none
+		ejectEffect: none
 		alwaysShooting: true
 		controllable: false
 		top: true
@@ -56,10 +56,12 @@ weapons: [
 			"width": 0,
 			"height": 0,
 			"hitSize": 0,
-			"hitEffect": false,
-			"explodeEffect": false,
-			"despawnEffect": false,
-			"smokeEffect": false,
+			"createChance": 0,
+			"hitEffect": "none",
+			"explodeEffect": "none",
+			"despawnEffect": "none",
+			"shootEffect": "none",
+			"smokeEffect": "none",
 			"speed": 0,
 			"damage": 0,
 			"lifetime": 0
@@ -74,8 +76,21 @@ weapons: [
 		"progress": "reload",
 		"followRotation": true,
 		"outline": false,
+		"top": true,
+		"under": false,
 		"suffix": "-rotor-blur",
-		"layer": 1000
+	},
+	{
+		"x": 0,
+		"y": -0.1,
+		"moveY": 0,
+		"moveRot": 0,
+		"type": "regionPart",
+		"followRotation": true,
+		"outline": true,
+		"top": true,
+		"under": false,
+		"suffix": "-rotor-top",
 	}
 		]
 	}
