@@ -12,6 +12,10 @@ I will give you two interesting information from this mod.
 
 # Change Logs📝
 
+#1.71 (small update)
+
+-fixing helicopter effect. when the rotor rotates, there is white smoke under the helicopter.
+
 #1.7
 
 -adding helicopter t1 and t2
