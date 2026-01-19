@@ -1,11 +1,11 @@
 {
-  "name": "More-vanilla",
-  "repo": "RednzBA990/MoreVanillaMod",
-  "displayName": "More Vanilla+",
-  "subtitle": "V1.71, Fix helikopter unit",
-  "author": "Rednz990 and Pirojok3000(code resource)",
-  "description": "Adds more serpulo unit and buildings to support your experience.\nAdd Tank, and Helicopter.\n\nDrone code from Pirojok3000 mod.\n\nI indonesian people btw :)",
-  "version": 1.71,
+  "name": "wi",
+  "repo": "RednzBA990/WarboundIndustriesMod",
+  "displayName": "[#EA8878[]]Warbound Industries",
+  "subtitle": "V1.8, Nerf and Remake update",
+  "author": "Rednz990",
+  "description": "[#B2002A[]]The war is Infinite![#FFFFFF[]]\n\n-Adding [#FFAA00[]]Functional building[#FFFFFF[]].\n-Adding new units include [#FF00FF[]]Tanks[#FFFFFF[]], [#FF5A00[]]Helicopters[#FFFFFF[]], and [#00FF00[]]Support Units[#FFFFFF[]].\nAdding a new [#FFB200[]]Technology[#FFFFFF[]] in game!\n( [#FF00FF[]]SERPULO ONLY[#FFFFFF[]] )\n\n\nI [#FF0000[]]indo[#FFFFFF[]]nesian people btw :)\n\n[#FFFF00]Found a bug? tag me on Discord[] ( [][#FF0000]@red.id9990[] )",
+  "version": 1.8,
   "minGameVersion": "147",
-  "hidden": false, 
+  "hidden": false
 }
