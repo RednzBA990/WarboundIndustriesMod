@@ -2,69 +2,138 @@ type: tank
 name: Aziot
 description: Serpulo tank. T2 from Axion Basic tank.
 speed: 0.7
-health: 640
+health: 1200
 armor: 10
+accel: 0.07
+drag: 0.07
 omniMovement: false
-rotateSpeed: 2.8
+rotateSpeed: 1.8
 treadPullOffset: 1
 rotateShooting: false
-hitSize: 18
-range: 180
+hitSize: 22
 itemCapacity: 40
 treadRects: [
 	{
 		type: rect
-		x: -34
-		y: -39
-		width: 22
-		height: 78
+		x: -46
+		y: -75
+		width: 18
+		height: 27
 	},
 	{
 		type: rect
-		x: 13
-		y: -39
-		width: 22
-		height: 78
+		x: 29
+		y: -75
+		width: 18
+		height: 27
+	},
+	{
+		type: rect
+		x: -46
+		y: 48
+		width: 18
+		height: 27
+	},
+	{
+		type: rect
+		x: 29
+		y: 48
+		width: 18
+		height: 27
 	}
 ]
 weapons: [
+	{
+		name: tankt2-aziot-smoll-gun
+		reload: 18
+		x: 9.5
+		y: 9.25
+		shootSound: shoot
+		top: true
+		mirror: true
+		rotate: true
+		bullet: {
+			type: basicBulletType
+			width: 6
+			height: 11
+			hitSize: 2
+			speed: 8
+			damage: 18
+			lifetime: 35
+		},
+		shoot: {
+			type: ShootAlternate
+			shots: 3
+			barrels: 1
+			shotDelay: 3
+		}
+	},
+	{
+		name: tankt2-aziot-missile
+        reload: 50
+        top: true
+        mirror: true
+        rotate: true
+        shake: 1.8
+        rotateSpeed: 4
+        inaccuracy: 4
+        x: 8
+        y: -8.75
+        shootX: 0.5
+        ejectEffect: none
+        shootSound: missile
+        bullet: {
+            type: MissileBulletType
+            homingPower: 0.2
+            homingRange: 60
+            weaveScale: 6
+            weaveMag: 1.1
+            damage: 20
+            explodeRange: 18
+            speed: 4
+            width: 8
+            height: 8
+            lifetime: 70
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
+			shootEffect: shootSmall
+			smokeEffect: shootSmallSmoke
+        },
+        shoot: {
+			type: ShootAlternate
+			shots: 2
+		}
+    }
     {
-        name: tankt2-aziot-gun
-        reload: 30
+        name: tankt2-aziot-w
+        reload: 120
         x: 0
         y: 0
-        shootY: 8
+        shootY: 25
         top: true
-        shake: 2
+        shake: 3
         spacing: 3
     	innacuracy: 10
     	rotate: true
-        rotateSpeed: 6
+        rotateSpeed: 2
         mirror: false
- 	   recoil: 1
+ 	   recoil: 1.5
  	   ejectEffect: casing2
-  	  shootSound: shootArtillerySmall
+  	  shootSound: shootArtillery
         bullet: {
 			type: FlakBulletType
-			damage: 22
-			speed: 4
+			damage: 60
+			speed: 6
 			width: 9
 			length: 15
-			lifetime: 55
-			splashDamage: 13,
-     	   splashDamageRadius: 20,
+			lifetime: 45
+			splashDamage: 25,
+     	   splashDamageRadius: 35,
 			shootEffect: shootBig
 			smokeEffect: shootBigSmoke
 			collidesGround: true
-			explodeRange: 18
+			explodeRange: 25
         }
-		shoot: {
-			type: ShootAlternate
-			barrels: 2
-			shots: 2
-			x: 1.6
-			y: 8
-		}
 		parts: [
 		{
 			type: RegionPart
@@ -72,9 +141,10 @@ weapons: [
 			progress: recoil
 			heatProgress: recoil
 			outline: false
+			under: false
+			top: true
 			moveX: 0
-			moveY: -2
-			layer: 61
+			moveY: -4
 			x: 0
 			y: 0
 			}
@@ -82,25 +152,28 @@ weapons: [
 			type: RegionPart
 			suffix: -body
 			outline: false
+			under: false
+			top: true
 			moveX: 0
 			moveY: 0
-			layer: 62
 			x: 0
 			y: 0
 			}
 		]
     }
 ]
-	  "research": {
-		parent: more-vanilla-tankt1-axion
+	  research: {
+		parent: tankt1-axion
 		requirements: [
 		{ item: copper, amount: 3000},
 		{ item: lead, amount: 2000},
 		{ item: titanium, amount: 2000},
-		{ item: graphite, amount: 1400},
-		{ item: silicon, amount: 1500}
+		{ item: sigraph, amount: 1500},
+		{ item: titarium, amount: 1400}
     	],
     	objectives: [
-    		more-vanilla-tank-uv-reconstructor-aditive
+    		factory-unit2-modern-reconstructor-aditive,
+    		sigraph,
+    		titarium
     	]
 	}

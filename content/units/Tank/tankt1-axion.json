@@ -2,74 +2,99 @@ type: tank
 name: Axion
 description: Serpulo basic tank.
 speed: 0.6
+accel: 0.07
+drag: 0.07
 health: 200
+armor: 2
 omniMovement: false
 rotateSpeed: 3
 treadPullOffset: 3
 rotateShooting: false
-hitSize: 10
+hitSize: 9.5
 range: 150
 itemCapacity: 15
 treadRects: [
 	{
 		type: rect
-		x: -21
-		y: -26
-		width: 15
-		height: 53
+		x: -23
+		y: -30
+		width: 11
+		height: 61
 	},
 	{
 		type: rect
-		x: 7
-		y: -26
-		width: 15
-		height: 53
+		x: 13
+		y: -30
+		width: 11
+		height: 61
 	}
 ]
 weapons: [
     {
-        name: tankt1-axion-gun
-        reload: 10
+        name: tankt1-axion-w
+        reload: 80
         x: 0
         y: 0
-        shootY: 8
+        shootY: 11.25
         top: true
         shots: 1
+        shake: 2
         spacing: 3
     	innacuracy: 10
     	rotate: true
-        rotateSpeed: 20
+        rotateSpeed: 6
         mirror: false
  	   recoil: 1
-  	  shootSound: shoot
+  	  shootSound: shootArtillerySmall
         bullet: {
-			type: BasicBulletType
-			damage: 11
-			speed: 3
-			width: 8
-			length: 12
+			type: FlakBulletType
+			damage: 25
+			speed: 4
+			width: 6
+			length: 15
 			lifetime: 55
-			shootEffect: shootSmall
-			smokeEffect: shootSmallSmoke
-        }
-		shoot: {
-			type: ShootAlternate
-			barrels: 2
-			x: 2
-			y: 8
-		}
+			splashDamage: 15,
+     	   splashDamageRadius: 20,
+			shootEffect: shootBig
+			smokeEffect: shootBigSmoke
+			collidesGround: true
+			explodeRange: 18
+        },
+        parts: [
+		{
+			type: RegionPart
+			suffix: -barrel
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			top: true
+			under: false
+			moveX: 0
+			moveY: -2
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -cover
+			outline: false
+			top: true
+			under: false
+			moveX: 0
+			moveY: 0
+			x: 0
+			y: 0
+			}
+		]
     }
 ]
 	  "research": {
-		parent: more-vanilla-tank-unit-factory
+		parent: factory-unit-modern
 		requirements: [
 		{ item: copper, amount: 800},
 		{ item: lead, amount: 500},
 		{ item: titanium, amount: 500},
 		{ item: graphite, amount: 450},
 		{ item: silicon, amount: 400}
-    	],
-    	objectives: [
-    		more-vanilla-tank-unit-factory
     	]
 	}
