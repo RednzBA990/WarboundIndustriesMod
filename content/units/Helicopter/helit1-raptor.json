@@ -1,24 +1,24 @@
 name: Raptor
-description: A basic helicopter, weaponed with 2 basic gun.
 flying: true
 drawFlame: false
 rotateShooting: true
 speed: 2.6
-rotateSpeed: 6
-accel: 0.5
-drag: 0.05
+rotateSpeed: 4
+armor: 3
+accel: 0.07
+drag: 0.07
 health: 300
 targetAir: true,
 targetGround: true,
-hitSize: 13
+hitSize: 15
 itemCapacity: 30
 range: 180
 weapons: [
 	{
 		name: helit1-raptor-gun
 		reload: 8
-		x: 2
-		y: 10
+		x: 2.75
+		y: 13
 		shootSound: shoot
 		top: true
 		layerOffset: -2
@@ -35,6 +35,40 @@ weapons: [
 			"maxRange": 180
 		}
 	}
+	{
+		"name": "helit1-raptor-gun-missile",
+        "reload": 60,
+        "top": true,
+        "layerOffset": -2,
+        "mirror": true,
+        "rotate": true,
+        "rotateSpeed": 4,
+        "inaccuracy": 4,
+        "x": 9,
+        "y": 2,
+        "ejectEffect": "none",
+        "shootSound": "missile",
+        "bullet": {
+            "type": "MissileBulletType",
+            "homingPower": 0.2,
+            "homingRange":60,
+            "weaveScale": 6,
+            "weaveMag": 1.1,
+            "damage": 20,
+            "speed": 3,
+            "width": 8,
+            "height": 8,
+            "lifetime": 70,
+			"hitEffect": "blastExplosion",
+			"despawnEffect": "blastExplosion",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootSmallSmoke"
+        },
+        "shoot": {
+			"type": "ShootAlternate",
+			"shots": 2
+		}
+    }
 	{
 		name: helit1-raptor-rotator
 		reload: 360
@@ -82,7 +116,7 @@ weapons: [
 	},
 	{
 		"x": 0,
-		"y": -0.1,
+		"y": 0,
 		"moveY": 0,
 		"moveRot": 0,
 		"type": "regionPart",
@@ -94,35 +128,9 @@ weapons: [
 	}
 		]
 	}
-	{
-        "reload": 60,
-        "top": true,
-        "mirror": true,
-        "inaccuracy": 4,
-        "x": 4,
-        "y": 0.2,
-        "ejectEffect": "none",
-        "shootSound": "missile",
-        "bullet": {
-            "type": "MissileBulletType",
-            "homingPower": 0.2,
-            "homingRange":60,
-            "weaveScale": 6,
-            "weaveMag": 1.1,
-            "damage": 20,
-            "speed": 3,
-            "width": 8,
-            "height": 8,
-            "lifetime": 70,
-			"hitEffect": "blastExplosion",
-			"despawnEffect": "blastExplosion",
-			"shootEffect": "shootBig",
-			"smokeEffect": "shootSmallSmoke"
-        }
-    }
 ]
 "research": {
-		parent: more-vanilla-tankt1-axion
+		parent: factory-unit-modern
 		requirements: [
 		{ item: copper, amount: 2500},
 		{ item: lead, amount: 1800},
