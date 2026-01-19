@@ -18,7 +18,7 @@ Remake upate
 
 simple information. all in units, and buildings in this mod has been remade.
 
-#1.71 (small update)
+# 1.71 (small update)
 
 -improving bundles.
 
@@ -26,7 +26,7 @@ simple information. all in units, and buildings in this mod has been remade.
 
 -fixing helicopter effect. when the rotor rotates, there is white smoke under the helicopter.
 
-#1.7
+# 1.7
 
 -adding helicopter t1 and t2
 
@@ -34,34 +34,34 @@ simple information. all in units, and buildings in this mod has been remade.
 
 -fixing some little bugs
 
-#1.6
+# 1.6
 
 -First global release
 -added the 2nd version of the serpulo tank
 
 -fixed sprite bug from previous tank
 
-#1.5
+# 1.5
 
 -added new tank for serpulo
 
-#1.4
+# 1.4
 
 -added an advanced version of Resource Extractor, Extreme Resource Extractor
 
-#1.3
+# 1.3
 
 -improve compatibility on Resource Extractor 
 
-#1.2
+# 1.2
 
 -adding resource extractor
 
-#1.1
+# 1.1
 
 -fixing drone and other block
 
-#1.0
+# 1.0
 
 -adding copper delivery drones
 -added unloading point and copper drone unloader point
