@@ -24,7 +24,7 @@
 	"hasItems": true,
 	"liquidCapacity": 30,
 	"itemCapacity": 30,
-	"craftTime": 2,
+	"craftTime": 8,
 	"craftEffect": "smeltsmoke",
     "ambientSound": "techloop",
     "ambientSoundVolume": 0.04,
@@ -51,5 +51,13 @@
         "graphite/50"
 	],
 	"category": "crafting",
-	"research": "melter"
+	"research": {
+			"parent": "tech-wi",
+		    "objectives": [
+				"silicon-smelter",
+				"graphite-press",
+				"mechanical-pump",
+				"conduit"
+    	]
+	}
 }

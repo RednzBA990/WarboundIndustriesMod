@@ -1,0 +1,49 @@
+{	
+  "name": "Titarium Mixer",
+  "type": "GenericCrafter",
+  "size": 3,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+  {
+    "type": "DrawDefault"
+  },
+ {
+    "type": "DrawFlame",
+    "flameColor": "ffe9b2",
+    "flameRadius": 5,         
+    "flameRadiusIn": 2,
+    "flameRadiusScl": 3,  
+    "flameRadiusMag": 2,    
+    "flameRadiusInMag": 1.5
+     	}
+    ]
+},
+	"hasPower": true,
+	"hasItems": true,
+	"itemCapacity": 20,
+	"craftTime": 60,
+	"buildTime": 360,
+	"craftEffect": "smeltsmoke",
+    "ambientSound": "techloop",
+    "ambientSoundVolume": 0.04,
+	"consumes": {
+		"power": 3,
+		"items": [ 
+			{ "item": "thorium", "amount": 2},
+			{ "item": "titanium", "amount": 2}
+		 ]
+	},
+	 "outputItems": [ 
+			{ "item": "titarium", "amount": 2}
+		 ],
+	"requirements": [
+        "lead/150",
+        "graphite/130",
+        "titanium/120",
+        "thorium/120",
+        "silicon/100"
+	],
+	"category": "crafting",
+	"research": "sigraph-mixer"
+}

@@ -1,7 +1,7 @@
 {	
   "name": "Extreme Resource Extractor",
   "description": "Extract resource from everywhere using water with Extreme Power.",
-  "type": "GenericCrafter",
+  "type": "Separator",
   "size": 4,
   "drawer": {
     "type": "DrawMulti",
@@ -24,7 +24,7 @@
 	"hasItems": true,
 	"liquidCapacity": 90,
 	"itemCapacity": 70,
-	"craftTime": 70,
+	"craftTime": 5,
 	"craftEffect": "smeltsmoke",
     "ambientSound": "techloop",
     "ambientSoundVolume": 0.06,
@@ -35,16 +35,14 @@
 			"amount": 1.5
 		}
 	},
-	 "outputItems": [ 
-			{ "item": "copper", "amount": 8},
-			{ "item": "lead", "amount": 8},
-			{ "item": "graphite", "amount": 6},
-			{ "item": "metaglass", "amount": 6},
-			{ "item": "silicon", "amount": 5},
-			{ "item": "titanium", "amount": 6},
-			{ "item": "thorium", "amount": 5},
-			{ "item": "plastanium", "amount": 4}
-		 ],
+		"results": [
+		"copper/6",
+		"lead/6",
+		"graphite/4",
+		"silicon/4",
+		"thorium/3",
+		"titanium/3"
+    ],
 	"requirements": [
         "lead/400",
         "copper/300",    
@@ -55,5 +53,5 @@
         "plastanium/100"
 	],
 	"category": "crafting",
-	"research": "more-vanilla-o1-resource-extractor"
+	"research": "o1-resource-extractor"
 }

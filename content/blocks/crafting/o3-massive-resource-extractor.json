@@ -1,7 +1,7 @@
 {	
   "name": "Gigantic Massive Resource Extractor",
   "description": "Extract resource from everywhere using water with massive power.",
-  "type": "GenericCrafter",
+  "type": "Separator",
   "size": 5,
   "drawer": {
     "type": "DrawMulti",
@@ -33,33 +33,26 @@
 	"hasItems": true,
 	"liquidCapacity": 200,
 	"itemCapacity": 200,
-	"craftTime": 60,
+	"craftTime": 3,
 	"buildTime": 3600,
 	"craftEffect": "smeltsmoke",
     "ambientSound": "techloop",
     "ambientSoundVolume": 0.12,
 	"consumes": {
-		"power": 8,
+		"power": 7,
         "liquid": {
 			"liquid": "water",
-			"amount": 2.5
+			"amount": 1.9
 		}
 	},
-	 "outputItems": [ 
-			{ "item": "sand", "amount": 20},
-			{ "item": "scrap", "amount": 18},
-			{ "item": "coal", "amount": 16},
-			{ "item": "copper", "amount": 15},
-			{ "item": "lead", "amount": 15},
-			{ "item": "graphite", "amount": 10},
-			{ "item": "metaglass", "amount": 10},
-			{ "item": "titanium", "amount": 10},
-			{ "item": "silicon", "amount": 8},
-			{ "item": "thorium", "amount": 8},
-			{ "item": "plastanium", "amount": 8},
-			{ "item": "phase-fabric", "amount": 6},
-			{ "item": "surge-alloy", "amount": 5}
-		 ],
+	"results": [
+		"copper/7",
+		"lead/7",
+		"graphite/5",
+		"silicon/5",
+		"thorium/5",
+		"titanium/5"
+    ],
 	"requirements": [
         "lead/1000",
         "copper/700",    
@@ -67,10 +60,8 @@
         "silicon/400",
         "graphite/500",
         "thorium/400",
-        "plastanium/350",
-        "phase-fabric/200",
-        "surge-alloy/150"
+        "plastanium/350"
 	],
 	"category": "crafting",
-	"research": "more-vanilla-o2-extreme-resource-extractor"
+	"research": "o2-extreme-resource-extractor"
 }
