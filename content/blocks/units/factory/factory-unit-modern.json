@@ -1,0 +1,43 @@
+{
+ "name": "Modern Unit Factory",
+ "type": "UnitFactory",
+ "health": 1200,
+ "size": 5,
+ "buildTime": 2100,
+ "requirements": [
+		{ "item": "graphite", "amount": 700},
+		{ "item": "thorium", "amount": 650},
+		{ "item": "titanium", "amount": 400},
+		{ "item": "silicon", "amount": 500}
+   ],
+ "hasPower": true,
+ "hasItems": true,
+	"consumes": {
+		"power": 3
+	},
+	"plans": [
+		{
+    "unit": "tankt1-axion",
+    "requirements": [
+	{ "item": "sigraph", "amount": 40},
+	{ "item": "titarium", "amount": 60}
+		],
+			"time": 1700,
+		},
+		{
+    "unit": "helit1-raptor",
+    "requirements": [
+	{ "item": "sigraph", "amount": 40},
+	{ "item": "titarium", "amount": 50}
+		],
+			"time": 1600,
+		}
+	],
+	"unitCapModifier": 0,
+	"research": {
+	"parent": "tech-wi",
+	"visible": true,
+	"objectives": [ "sigraph", "titarium" ]
+	},
+  	"category": "units",
+}

@@ -22,12 +22,12 @@
 	{ "item": "lead", "amount": 40},
 	{ "item": "graphite", "amount": 25}
 		],
-			"time": 800,
-		},
+			"time": 900,
+		}
 	],
 	"unitCapModifier": 0,
 	"research": {
-	"parent": "ground-factory",
+	"parent": "tech-wi",
 	"visible": true,
 	"requirements": [
 		  "copper/1400",
