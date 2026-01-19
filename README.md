@@ -12,6 +12,12 @@ I will give you two interesting information from this mod.
 
 # Change Logs📝
 
+# 1.8
+
+Remake upate
+
+simple information. all in units, and buildings in this mod has been remade.
+
 #1.71 (small update)
 
 -improving bundles.
