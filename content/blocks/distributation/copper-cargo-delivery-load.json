@@ -20,18 +20,18 @@
     "buildTime": 180,
 
     "hasItems": true,
-    "hasPower": true,
     "hasLiquids": false,
-    "consumes":
-    {
-        "power": 1
-  }
-    research: {
-  parent: titanium-conveyor
-  requirements: [
-    copper/700
-    lead/630
-    graphite/525
-  ]
-}
+    "research": {
+    "parent": "tech-wi",
+    "requirements": [
+    	"copper/700",
+    	"lead/630",
+   	 "graphite/525"
+	  ],
+      	objectives: [
+      	  copper,
+      	  lead,
+    		graphite-press
+    	]
+	}
 }

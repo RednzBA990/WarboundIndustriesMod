@@ -22,8 +22,8 @@
     "outputItems": true,
     "buildTime": 140,
 
-    research: {
-  parent: more-vanilla-copper-cargo-delivery-load
+  research: {
+  parent: tech-wi
   requirements: [
     copper/350
     lead/175

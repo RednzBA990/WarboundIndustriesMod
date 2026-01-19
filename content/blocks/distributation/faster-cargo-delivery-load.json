@@ -29,7 +29,7 @@
         "power": 3
   }
     research: {
-  parent: more-vanilla-copper-cargo-delivery-unload
+  parent: copper-cargo-delivery-load
   requirements: [
     thorium/1050
     lead/1050
@@ -37,5 +37,10 @@
     graphite/630
     surge-alloy/350
   ]
+      	objectives: [
+    		surge-smelter,
+    		thorium,
+    		silicon
+    	]
 }
 }
