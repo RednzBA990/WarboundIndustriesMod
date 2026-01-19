@@ -19,4 +19,12 @@
     "allowedInPayloads": false,
     "logicControllable": false,
     "playerControllable": false
+      "research": {
+  	"parent": "caero",
+  	"requiresUnlock": false,
+  	"objectives": [
+  		"copper-cargo-delivery-load",
+  		"copper-cargo-delivery-unload"
+    ]
+  }
 }

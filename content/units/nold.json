@@ -1,0 +1,52 @@
+{
+    "name": "Nold",
+    "flying": true,
+	"hitSize": 13.5,
+	"health": 300,
+	"mineRange": 100,
+	"mineTier": 5,
+	"mineSpeed": 5,
+	"buildRange": 180,
+	"buildSpeed": 1.8,
+	"itemCapacity": 60,
+	"speed": 3,
+	"rotateSpeed": 6,
+	"rotateShooting": true,
+	"accel": 0.1,
+	"drag": 0.1,
+    "engineSize": 4,
+    "engineOffset": 7.25,
+    "isEnemy": false,
+    "weapons": [
+			{
+				"name": "nold-w",
+				"type": "RepairBeamWeapon",
+				"repairSpeed": 0.8,
+				"x": 0,
+				"y": 1,
+				"shootY": 4,
+				"targetUnits": true,
+				"targetBuildings": true,
+				"controllable": false,
+				"autoTarget": true,
+				"bullet": {
+					"repair": 1,
+					"damage": 3,
+					"maxRange": 100,
+					"range": 100
+			}
+		}
+	],
+    "research": {
+	"parent": "node",
+	"visible": true,
+	"requirements": [
+		  "lead/600",
+		  "graphite/500",
+		  "plastanium/150"
+		],
+    	"objectives": [
+    		"support-unit-factory2-reconstructor-additive"
+    	]
+	}
+}

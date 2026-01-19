@@ -28,11 +28,15 @@
 		}
 	],
     "research": {
-	"parent": "more-vanilla-support-unit-factory",
+	"parent": "support-unit-factory",
 	"visible": true,
 	"requirements": [
 		  "lead/400",
 		  "graphite/350"
 		]
+   "objectives": [
+    		"lead",
+    		"graphite-press"
+    	]
 	}
 }
