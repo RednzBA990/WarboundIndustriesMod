@@ -1,11 +1,5 @@
 # WarboundIndustries Mod✨
-Mindustry mod by adding functional buildings and units to help in campaign mode (only serpulo).
 
-even tank and helicopter!🔥
+Collect resources and defeat them all !
 
-# Information🗒️
-I will give you two interesting information from this mod.
-
-1. Support unit, Node. Nodes will help you build buildings and mine ore, if you command them. Even the manufacturing price is cheap!!
-
-2. Resource Extractor: There are two versions of the Resource Extractor: the original and the second. As the name suggests, this building extracts resources using water and power. the output is random, usually copper, lead, graphite, etc.
+This mod adds various buildings and units to aid your expansion in campaign mode. I love the helicopters and tanks in this mod :]
