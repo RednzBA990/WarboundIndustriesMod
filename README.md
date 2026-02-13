@@ -1,19 +1,19 @@
 # WarboundIndustries Mod✨
-
+A mod that adds new units, blocks, and even items to the game.
  # Content
 ## Combat Units
 This mod introduces new combat units including modern tanks and helicopters, equipped with advanced weapons, rotor animations, missiles, and barrel heat effects to enhance strategic warfare gameplay.
 
-# Industrial & Production Blocks
+## Industrial & Production Blocks
 New crafting blocks are added such as tiered resource extractors, alloy smelters, material mixers, as well as dedicated factories and reconstructors for producing and upgrading combat units.
 
-# Distribution Blocks
+## Distribution Blocks
 The mod includes a new cargo delivery system with standard and faster variants, allowing more efficient resource transportation compared to the vanilla system.
 
-# New Items
+## New Items
 Custom materials such as Sigraph and Titarium are added, serving as core components for crafting advanced blocks and units within the mod.
 
-# Supported Languages
+## Supported Languages
 The mod supports English (default) and Bahasa Indonesia.
 
 
