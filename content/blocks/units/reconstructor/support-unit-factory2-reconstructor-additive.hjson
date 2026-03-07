@@ -4,16 +4,22 @@ size: 3
 consumes: {
 power: 2
 items: [
-sigraph/25
+sigraph/30
+lead/60
 plastanium/15
 ]
 }
-constructTime: 1200
+constructTime: 2700
 upgrades: [
 [node, nold]
 ]
 research: {
-parent: support-unit-factory
+parent: wi-support-unit-factory
+requirements: [
+copper/1400
+lead/1200
+graphite/900
+]
 }
 requirements: [
 copper/200

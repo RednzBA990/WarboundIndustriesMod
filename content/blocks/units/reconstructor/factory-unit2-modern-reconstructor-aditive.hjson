@@ -15,7 +15,7 @@ upgrades: [
 [helit1-raptor, helit2-rapier]
 ]
 research: {
-parent: factory-unit-modern
+parent: wi-factory-unit-modern
 requirements: [
 copper/2500
 lead/1200
