@@ -1,39 +1,47 @@
 {
+	"type": "flying",
     "name": "Node",
     "description": "A small nano drone can helping you to built building.",
     "flying": true,
+    "controller": "mindustry.ai.types.BuilderAI",
 	"hitSize": 6,
 	"health": 80,
 	"mineRange": 70,
 	"mineTier": 4,
 	"mineSpeed": 4,
 	"buildRange": 70,
-	"buildSpeed": 1.5,
+	"buildSpeed": 1.2,
 	"itemCapacity": 40,
 	"speed": 3.2,
 	"rotateSpeed": 8,
 	"rotateShooting": true,
-	"canAttack": false,
+	"lowAltitude": true,
+    "isEnemy": false,
 	"accel": 0.3,
 	"drag": 0.07,
     "engineSize": 2,
     "engineOffset": 5,
-    "isEnemy": false,
+    "targetPriority": -2,
+    "waveTrailY": -2.0,
+	"trailColor": "84F490",
+	"trailLength": 6,
     "abilities": [
 		{
 			"type": "RepairFieldAbility",
-			"amount": 1,
-			"reload": 100,
+			"amount": 5,
+			"reload": 60,
 			"range": 70
 		}
 	],
+	"commands": ["move", "enterPayload", "rebuild", "assist", "mine"],
+	"defaultCommand": "assist",
     "research": {
 	"parent": "support-unit-factory",
 	"visible": true,
 	"requirements": [
 		  "lead/400",
 		  "graphite/350"
-		]
+		],
    "objectives": [
     		"lead",
     		"graphite-press"

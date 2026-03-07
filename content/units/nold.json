@@ -1,49 +1,57 @@
 {
+	"type": "flying",
     "name": "Nold",
+    "controller": "mindustry.ai.types.BuilderAI",
     "flying": true,
 	"hitSize": 13.5,
-	"health": 300,
+	"health": 200,
 	"mineRange": 100,
 	"mineTier": 5,
 	"mineSpeed": 5,
 	"buildRange": 180,
-	"buildSpeed": 1.8,
+	"buildSpeed": 1.5,
 	"itemCapacity": 60,
 	"speed": 3,
 	"rotateSpeed": 6,
 	"rotateShooting": true,
+	"lowAltitude": true,
+    "isEnemy": false,
 	"accel": 0.1,
-	"drag": 0.1,
+	"drag": 0.07,
     "engineSize": 4,
     "engineOffset": 7.25,
-    "isEnemy": false,
+    "targetPriority": -2,
+    "waveTrailY": -3.0,
+	"trailColor": "84F490",
+	"trailLength": 12,
     "weapons": [
 			{
 				"name": "nold-w",
 				"type": "RepairBeamWeapon",
-				"repairSpeed": 0.8,
+				"repairSpeed": 0.5,
 				"x": 0,
-				"y": 1,
+				"y": 0.25,
 				"shootY": 4,
+				"mirror": false,
 				"targetUnits": true,
 				"targetBuildings": true,
 				"controllable": false,
 				"autoTarget": true,
 				"bullet": {
-					"repair": 1,
-					"damage": 3,
-					"maxRange": 100,
-					"range": 100
+					"type": "BulletType",
+					"maxRange": 100
 			}
 		}
 	],
+	"commands": ["move", "enterPayload", "rebuild", "repair", "assist", "mine"],
+	"defaultCommand": "assist",
     "research": {
 	"parent": "node",
 	"visible": true,
 	"requirements": [
-		  "lead/600",
-		  "graphite/500",
-		  "plastanium/150"
+		  "lead/1600",
+		  "graphite/1500",
+		  "plastanium/1150"
 		],
     	"objectives": [
     		"support-unit-factory2-reconstructor-additive"

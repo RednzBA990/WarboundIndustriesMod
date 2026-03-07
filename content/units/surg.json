@@ -6,13 +6,13 @@
 	"hitSize": 7,
 	"health": 200,
 	"range": 0,
-	"itemCapacity": 160,
+	"itemCapacity": 150,
 	"speed": 5,
 	"rotateSpeed": 8,
 	"rotateShooting": false,
 	"accel": 0.1,
 	"drag": 0.07,
-    "engineSize": 2,
+    "engineSize": 3,
     "engineOffset": 6,
 	"defaultController": "CargoAI",
     "isEnemy": false,
@@ -23,8 +23,8 @@
   	"parent": "caero",
   	"requiresUnlock": false,
   	"objectives": [
-  		"copper-cargo-delivery-load",
-  		"copper-cargo-delivery-unload"
+  		"faster-cargo-delivery-load",
+  		"faster-cargo-delivery-unload"
     ]
   }
 }
