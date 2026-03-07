@@ -1,0 +1,21 @@
+{
+    "type": "ItemBridge",
+    "name": "Titarium bridge conveyor",
+    "description": "Better than conventional bridge conveyor. Fast and more range.",
+    "health": 160,
+	"itemCapacity": 15,
+	"buildTime": 96,
+    "requirements": [
+ 	 "copper/8",
+  	"lead/8",
+  	"titarium/6"
+    ],
+    "range": 6,
+    "transportTime": 3,
+    "hasPower": false,
+    "category": "distribution",
+    "research": {
+    	"researchCostMultiplier": 0.5,
+		"parent": "wi-d1-c1-titarium-conveyor"
+    }
+}

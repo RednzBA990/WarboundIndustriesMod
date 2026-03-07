@@ -1,0 +1,21 @@
+{
+	"type": "Conveyor",
+	"name": "Surge conveyor",
+	"health": 600,
+	"buildTime": 30,
+	"requirements": [
+	"sigraph/2",
+	"titarium/2",
+	"surge-alloy/1"
+	],
+	"category": "distribution",
+	"speed": 0.20,
+	"displayedSpeed": 24.0,
+	"research": {
+		"researchCostMultiplier": 0.6,
+		"parent": "wi-d1-c1-titarium-conveyor",
+		"objectives": [
+			"surge-smelter"
+		]
+   }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "ItemBridge",
+    "name": "Surge bridge conveyor",
+    "description": "Advanced version of Titarium bridge conveyor. More faster and more range.",
+    "health": 360,
+	"itemCapacity": 25,
+	"buildTime": 150,
+    "requirements": [
+ 	 "titarium/6",
+  	"surge-alloy/5"
+    ],
+    "range": 11,
+    "transportTime": 1.5,
+    "hasPower": false,
+    "category": "distribution",
+    "research": {
+    		"researchCostMultiplier": 0.6,
+			"parent": "wi-d1-c2-titarium-bridge-conveyor"
+			}
+}

@@ -1,6 +1,6 @@
 {
     "type": "UnitCargoUnloadPoint",
-    "name": "Faster Drone Unloading Point",
+    "name": "Advanced Drone Unloading Point",
     "description": "Acts as unloading point for cargo drones. Accepts items that match the selected filter.",
 
     "size": 2,
@@ -12,25 +12,21 @@
     "separateItemCapacity": true,
     "requirements": 
     [
-		"lead/200",
-		"graphite/180",
-		"silicon/150"
+    	"copper/120",
+		"lead/80",
+		"graphite/60"
 	],
     "category": "distribution",
     "speed": 4,
 
     "hasItems": true,
-    "hasLiquids": flase,
-    "outputsLiquid": flase,
+    "hasLiquids": false,
+    "outputsLiquid": false,
     "outputItems": true,
     "buildTime": 200,
 
-    research: {
-  parent: copper-cargo-delivery-unload
-  requirements: [
-    lead/700
-    graphite/630
-    silicon/525
-  ]
-}
+    "research": {
+ 	 "parent": "copper-cargo-delivery-unload",
+ 	 "researchCostMultiplier": 0.4
+	}
 }

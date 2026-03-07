@@ -11,11 +11,9 @@
     "separateItemCapacity": true,
     "requirements": 
     [
-    	"thorium/300",
-    	"lead/300",
-		"silicon/200",
-		"graphite/180",
-		"surge-alloy/100"
+    	"lead/100",
+		"sigraph/80",
+		"surge-alloy/50"
 	],
     "category": "distribution",
 
@@ -28,19 +26,8 @@
     {
         "power": 3
   }
-    research: {
-  parent: copper-cargo-delivery-load
-  requirements: [
-    thorium/1050
-    lead/1050
-    silicon/700
-    graphite/630
-    surge-alloy/350
-  ]
-      	objectives: [
-    		surge-smelter,
-    		thorium,
-    		silicon
-    	]
-}
+    "research": {
+ 	 "parent": "copper-cargo-delivery-load",
+ 	 "researchCostMultiplier": 0.3
+	}
 }

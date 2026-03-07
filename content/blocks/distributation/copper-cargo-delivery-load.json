@@ -11,27 +11,27 @@
     "separateItemCapacity": true,
     "requirements": 
     [
-    	"copper/200",
-		"lead/180",
-		"graphite/150",
+    	"copper/100",
+		"lead/80",
+		"graphite/50"
 	],
     "category": "distribution",
 
     "buildTime": 180,
-
+	"hasPower": true,
     "hasItems": true,
     "hasLiquids": false,
+    "consumes":
+    {
+        "power": 0.5
+  }
     "research": {
-    "parent": "tech-wi",
-    "requirements": [
-    	"copper/700",
-    	"lead/630",
-   	 "graphite/525"
-	  ],
-      	objectives: [
-      	  copper,
-      	  lead,
-    		graphite-press
-    	]
+ 	 "parent": "tech-wi",
+ 	 "researchCostMultiplier": 0.4,
+ 	 "objectives": [
+ 			"container",
+ 			"bridge-conveyor",
+ 			"titanium-conveyor"
+ 		]
 	}
 }
