@@ -2,10 +2,19 @@
   "name": "wi",
   "repo": "RednzBA990/WarboundIndustriesMod",
   "displayName": "[#EA8878[]]Warbound Industries",
-  "subtitle": "V1.8, Nerf and Remake update",
-  "author": "Rednz990",
-  "description": "[#B2002A[]]The war is Infinite![#FFFFFF[]]\n\n-Adding [#FFAA00[]]Functional building[#FFFFFF[]].\n-Adding new units include [#FF00FF[]]Tanks[#FFFFFF[]], [#FF5A00[]]Helicopters[#FFFFFF[]], and [#00FF00[]]Support Units[#FFFFFF[]].\nAdding a new [#FFB200[]]Technology[#FFFFFF[]] in game!\n( [#FF00FF[]]SERPULO ONLY[#FFFFFF[]] )\n\n\nI [#FF0000[]]indo[#FFFFFF[]]nesian people btw :)\n\n[#FFFF00]Found a bug? tag me on Discord[] ( [][#FF0000]@red.id9990[] )",
-  "version": 1.8,
+  "subtitle": "V1.9, Random and Resprite update",
+  "author": "Rednz990 [ DC: @red.id9990 ]",
+  "description":
+  '''
+[#AEAEAE[]]A mod that focuses on improving the infrastructure industry which is useful in campaign mode.
+
+Adding more crafters, distribution blocks, drills, items, and new units(include combat units, and support units) to support your gameplay!
+
+[#FFB600[]]BUILD[#AEAEAE[]] - [#FF4C00[]]EXTRACT[#AEAEAE[]] - [#FF00F6[]]CONQUER[#AEAEAE[]].
+
+Support me by starring my Mod Repo!!
+  '''
+  "version": 1.9,
   "minGameVersion": "147",
   "hidden": false
 }
