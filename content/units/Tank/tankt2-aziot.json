@@ -2,42 +2,44 @@ type: tank
 name: Aziot
 description: Serpulo tank. T2 from Axion Basic tank.
 speed: 0.7
-health: 1200
+health: 1560
 armor: 10
-accel: 0.07
-drag: 0.07
 omniMovement: false
+rotateMoveFirst: true
+forceMultiTarget: true
 rotateSpeed: 1.8
 treadPullOffset: 1
 rotateShooting: false
 hitSize: 22
-itemCapacity: 40
+itemCapacity: 60
+range: 200
+treadFrames: 32
 treadRects: [
 	{
 		type: rect
 		x: -46
-		y: -75
+		y: 48
 		width: 18
 		height: 27
 	},
 	{
 		type: rect
 		x: 29
-		y: -75
+		y: 48
 		width: 18
 		height: 27
 	},
 	{
 		type: rect
 		x: -46
-		y: 48
+		y: -75
 		width: 18
 		height: 27
 	},
 	{
 		type: rect
 		x: 29
-		y: 48
+		y: -75
 		width: 18
 		height: 27
 	}
@@ -45,7 +47,7 @@ treadRects: [
 weapons: [
 	{
 		name: tankt2-aziot-smoll-gun
-		reload: 18
+		reload: 15
 		x: 9.5
 		y: 9.25
 		shootSound: shoot
@@ -57,9 +59,9 @@ weapons: [
 			width: 6
 			height: 11
 			hitSize: 2
-			speed: 8
-			damage: 18
-			lifetime: 35
+			speed: 6
+			damage: 20
+			lifetime: 30
 		},
 		shoot: {
 			type: ShootAlternate
@@ -88,12 +90,13 @@ weapons: [
             homingRange: 60
             weaveScale: 6
             weaveMag: 1.1
-            damage: 20
-            explodeRange: 18
+            damage: 15
+            splashDamage: 40
+  	  	splashDamageRadius: 25
             speed: 4
             width: 8
             height: 8
-            lifetime: 70
+            lifetime: 48
 			hitEffect: blastExplosion
 			despawnEffect: blastExplosion
 			shootEffect: shootSmall
@@ -122,18 +125,40 @@ weapons: [
   	  shootSound: shootArtillery
         bullet: {
 			type: FlakBulletType
-			damage: 60
 			speed: 6
 			width: 9
 			length: 15
-			lifetime: 45
-			splashDamage: 25,
-     	   splashDamageRadius: 35,
+			lifetime: 37
+			pierceArmor: true
+			damage: 20
+			splashDamage: 80
+     	   splashDamageRadius: 35
+            status: melting
+ 	       statusDuration: 120
+ 			hitEffect: {
+				type: multiEffect,
+					effects: [
+				{
+		          "type": "WaveEffect",
+  		        "lifetime": 25,
+		          "sizeFrom": 0,
+      		    "sizeTo": 24,
+        		  "strokeFrom": 4,
+        		  "strokeTo": 0,
+        		  "colorFrom": "66B1FFFF",
+        		  "colorTo": "66B1FFFF"
+					}
+				]
+			},
 			shootEffect: shootBig
 			smokeEffect: shootBigSmoke
 			collidesGround: true
-			explodeRange: 25
-        }
+        },
+		shoot: {
+			type: ShootAlternate
+			barrels: 1
+			shotDelay: 10
+		},
 		parts: [
 		{
 			type: RegionPart
@@ -165,8 +190,8 @@ weapons: [
 	  research: {
 		parent: tankt1-axion
 		requirements: [
-		{ item: copper, amount: 3000},
-		{ item: lead, amount: 2000},
+		{ item: copper, amount: 3400},
+		{ item: lead, amount: 2200},
 		{ item: titanium, amount: 2000},
 		{ item: sigraph, amount: 1500},
 		{ item: titarium, amount: 1400}

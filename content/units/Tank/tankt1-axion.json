@@ -1,18 +1,18 @@
 type: tank
 name: Axion
 description: Serpulo basic tank.
-speed: 0.8
-accel: 0.07
-drag: 0.07
-health: 200
-armor: 2.5
+speed: 0.6
+health: 550
+armor: 4
 omniMovement: false
+rotateMoveFirst: true
 rotateSpeed: 3
 treadPullOffset: 3
 rotateShooting: false
-hitSize: 10
-range: 200
+hitSize: 9.5
+range: 160
 itemCapacity: 15
+treadFrames: 7
 treadRects: [
 	{
 		type: rect
@@ -48,13 +48,13 @@ weapons: [
   	  shootSound: shootArtillerySmall
         bullet: {
 			type: FlakBulletType
-			damage: 35
-			speed: 6
+			damage: 15
+			speed: 4
 			width: 6
 			length: 15
-			lifetime: 70
-			splashDamage: 15,
-     	   splashDamageRadius: 20,
+			lifetime: 45
+			splashDamage: 30,
+     	   splashDamageRadius: 25,
 			shootEffect: shootBig
 			smokeEffect: shootBigSmoke
 			collidesGround: true
@@ -87,6 +87,25 @@ weapons: [
 			}
 		]
     }
+    {
+		name: tankt1-axion-smoll-gun
+		reload: 8
+		x: 4.5
+		y: -3.75
+		shootSound: shoot
+		top: true
+		mirror: false
+		rotate: true
+		bullet: {
+			type: basicBulletType
+			width: 7
+			height: 12
+			hitSize: 2
+			speed: 8
+			damage: 10
+			lifetime: 15
+		}
+	}
 ]
 	  "research": {
 		parent: factory-unit-modern
