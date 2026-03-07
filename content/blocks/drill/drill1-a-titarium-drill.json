@@ -1,0 +1,33 @@
+{
+	"name": "Titarium drill",
+	"type": "Drill",
+	"size": 2,
+	"tier": 5,
+	"drillTime": 120,
+	"buildTime": 192,
+	"health": 230,
+	"rotateSpeed": 2,
+	"warmupSpeed": 0.008,
+	"liquidBoostIntensity": 1.7,
+	"hardnessDrillMultiplier": 0.7,
+	"liquidCapacity": 35,
+	"consumes": {
+		"liquid": {
+			"liquid": "water", 
+			"amount": 0.07,
+			"optional": true,
+			"booster": true
+		},
+	},
+	"requirements": [
+		"copper/35",
+		"graphite/30",
+		"titarium/23"
+	],
+	"category": "production",
+	"research": {
+		"researchCostMultiplier": 0.3,
+		"parent": "tech-wi",
+		"objectives": [ "pneumatic-drill" ]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"name": "Surge Drill",
+	"type": "Drill",
+	"size": 3,
+	"tier": 6,
+	"drillTime": 110,
+	"buildTime": 276,
+	"health": 460,
+	"rotateSpeed": 4,
+	"warmupSpeed": 0.004,
+	"liquidBoostIntensity": 1.7,
+	"hardnessDrillMultiplier": 2,
+	"liquidCapacity": 50,
+	"consumes": {
+		"power": 1,
+		"liquid": {
+			"liquid": "water", 
+			"amount": 0.2,
+			"optional": true,
+			"booster": true
+		}
+	},
+	"requirements": [
+		"lead/100",
+		"sigraph/80",
+		"titarium/60",
+		"surge-alloy/40"
+	],
+	"category": "production",
+	"research": {
+		"researchCostMultiplier": 0.4,
+		"parent": "drill1-a-titarium-drill"
+	}
+}
