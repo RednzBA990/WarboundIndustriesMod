@@ -1,5 +1,6 @@
 type: material
 name: Titarium
-cost: 2.0
+cost: 2.3
 color: dcaad8
+radioactivity: 1.5
 research: sigraph
