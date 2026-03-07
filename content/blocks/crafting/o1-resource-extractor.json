@@ -1,6 +1,5 @@
 {	
   "name": "Hard Resource Extractor",
-  "description": "Extract resource from everywhere using water.",
   "type": "Separator",
   "size": 3,
   "drawer": {
@@ -15,19 +14,30 @@
     "drawLiquid": "water"
   },
   {
+    "type": "DrawRegion",
+    "suffix": "-rotator",
+    "rotateSpeed": 2,
+    "spinSprite": true
+  },
+  {
     "type": "DrawDefault"
+  },
+  {
+    "type": "DrawRegion",
+    "suffix": "-top"
   }
     ]
 },
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
-	"liquidCapacity": 30,
+	"attribute": "sand",
+	"liquidCapacity": 60,
 	"itemCapacity": 30,
 	"craftTime": 8,
 	"craftEffect": "smeltsmoke",
-    "ambientSound": "techloop",
-    "ambientSoundVolume": 0.04,
+    "ambientSound": "loopExtract",
+    "ambientSoundVolume": 3,
 	"consumes": {
 		"power": 3,
         "liquid": {
@@ -52,6 +62,7 @@
 	],
 	"category": "crafting",
 	"research": {
+			"researchCostMultiplier": 0.5,
 			"parent": "tech-wi",
 		    "objectives": [
 				"silicon-smelter",

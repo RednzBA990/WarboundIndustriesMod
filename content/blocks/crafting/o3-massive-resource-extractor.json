@@ -1,6 +1,5 @@
 {	
   "name": "Gigantic Massive Resource Extractor",
-  "description": "Extract resource from everywhere using water with massive power.",
   "type": "Separator",
   "size": 5,
   "drawer": {
@@ -15,34 +14,36 @@
     "drawLiquid": "water"
   },
   {
+    "type": "DrawRegion",
+    "suffix": "-rotator",
+    "rotateSpeed": 2,
+    "spinSprite": true
+  },
+  {
     "type": "DrawDefault"
   },
- {
-    "type": "DrawFlame",
-    "flameColor": "ffce9a",
-    "flameRadius": 6.5,         
-    "flameRadiusIn": 3.5,
-    "flameRadiusScl": 4.5,  
-    "flameRadiusMag": 3,    
-    "flameRadiusInMag": 2
-     	}
+  {
+    "type": "DrawRegion",
+    "suffix": "-top"
+ 	   }
     ]
 },
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
+	"attribute": "sand",
 	"liquidCapacity": 200,
 	"itemCapacity": 200,
 	"craftTime": 3,
 	"buildTime": 3600,
 	"craftEffect": "smeltsmoke",
-    "ambientSound": "techloop",
-    "ambientSoundVolume": 0.12,
+    "ambientSound": "loopExtract",
+    "ambientSoundVolume": 8,
 	"consumes": {
 		"power": 7,
         "liquid": {
 			"liquid": "water",
-			"amount": 1.9
+			"amount": 1.6666666666666
 		}
 	},
 	"results": [
@@ -60,8 +61,12 @@
         "silicon/400",
         "graphite/500",
         "thorium/400",
-        "plastanium/350"
+        "plastanium/350",
+        "surge-alloy/250"
 	],
 	"category": "crafting",
-	"research": "o2-extreme-resource-extractor"
+	"research": {
+		"researchCostMultiplier": 0.6,
+		"parent": "o2-extreme-resource-extractor"
+	}
 }

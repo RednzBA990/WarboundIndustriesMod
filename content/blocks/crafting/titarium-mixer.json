@@ -25,8 +25,8 @@
 	"craftTime": 60,
 	"buildTime": 360,
 	"craftEffect": "smeltsmoke",
-    "ambientSound": "techloop",
-    "ambientSoundVolume": 0.04,
+    "ambientSound": "loopSmelter",
+    "ambientSoundVolume": 3,
 	"consumes": {
 		"power": 3,
 		"items": [ 
@@ -45,5 +45,14 @@
         "silicon/100"
 	],
 	"category": "crafting",
-	"research": "sigraph-mixer"
+	"research": {
+		"parent": "sigraph-mixer",
+		"requirements": [
+        "lead/1500",
+        "graphite/1300",
+        "titanium/1200",
+        "thorium/1200",
+        "silicon/1000"
+		]
+	}
 }

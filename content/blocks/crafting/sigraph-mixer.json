@@ -25,8 +25,8 @@
 	"craftTime": 45,
 	"buildTime": 360,
 	"craftEffect": "smeltsmoke",
-    "ambientSound": "techloop",
-    "ambientSoundVolume": 0.04,
+    "ambientSound": "loopSmelter",
+    "ambientSoundVolume": 3,
 	"consumes": {
 		"power": 3,
 		"items": [ 
@@ -44,5 +44,14 @@
         "silicon/100"
 	],
 	"category": "crafting",
-	"research": "tech-wi"
+	"research": {
+		"parent": "tech-wi",
+		"objectives": [ "graphite-press" ],
+		"requirements": [
+ 	       "lead/320",
+ 	       "graphite/240",
+ 	       "titanium/250",
+ 	       "silicon/200"
+		]
+	}
 }
