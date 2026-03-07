@@ -1,24 +1,28 @@
 name: Rapier
+type: flying
 flying: true
 drawEngine: false
 engineSize: 0
 engineOffset: 0
-armor: 7
+armor: 8
+health: 1450
 rotateShooting: true
-speed: 2.3
-rotateSpeed: 2.8
+lowAltitude: true
+speed: 2.0
+rotateSpeed: 2.5
 accel: 0.06
 drag: 0.06
-health: 940
 targetAir: true
 targetGround: true
-hitSize: 23.75
-itemCapacity: 60
-range: 240
+hitSize: 24
+itemCapacity: 80
+range: 180
+aimDst: 180
+
 weapons: [
 	{
 		name: medium-basic-gun
-		reload: 8
+		reload: 10
 		x: 3.5
 		y: 18
 		shootSound: shoot
@@ -27,155 +31,128 @@ weapons: [
 		mirror: true
 		rotate: true
 		bullet: {
-			"type": "basicBulletType",
-			"width": 6,
-			"height": 11,
-			"hitSize": 2,
-			"speed": 8,
-			"damage": 20,
-			"lifetime": 35,
-			"maxRange": 240
+			type: BasicBulletType
+			width: 8
+			height: 12
+			speed: 7
+			damage: 25
+			lifetime: 26
 		}
 	}
 	{
 		name: medium-heavy-gun
-		reload: 50
+		reload: 45
 		x: 5
 		y: 16
 		shootSound: shootStell
-		shake: 1.3
+		shake: 1.5
 		top: true
 		layerOffset: -2
-		rotateSpeed: 4
 		mirror: true
 		rotate: true
 		shoot: {
 			type: ShootAlternate
 			shots: 2
 			barrels: 1
-			shotDelay: 3
-			},
+			shotDelay: 4
+		}
 		bullet: {
 			type: FlakBulletType
-			damage: 25
 			speed: 6
-			width: 9
-			length: 12
-			lifetime: 45
-			splashDamage: 15,
-     	   splashDamageRadius: 20,
+			width: 10
+			height: 14
+			lifetime: 30
+			splashDamage: 35
+			splashDamageRadius: 30
+			collidesGround: true
+			explodeRange: 25
 			shootEffect: shootBig
 			smokeEffect: shootBigSmoke
-			collidesGround: true
-			explodeRange: 20
-        }
+		}
 	}
 	{
-		"name": "helit1-raptor-gun-missile",
-        "reload": 70,
-        "top": true,
-        "mirror": true,
-        "rotate": true,
-        "inaccuracy": 6,
-        "shake": 2,
-        "rotateSpeed": 3,
-        "x": 12.25,
-        "y": -3.5,
-        "ejectEffect": "none",
-        "shootSound": "shootMissile",
-        "shoot": {
-			"type": "ShootAlternate",
-			"shots": 4,
-			"shotDelay": 4
-			},
-        "bullet": {
-            "type": "MissileBulletType",
-            "homingPower": 0.2,
-            "homingRange":60,
-            "weaveScale": 6,
-            "weaveMag": 1.1,
-            "damage": 38,
-            "speed": 4,
-            "width": 8,
-            "height": 8,
-            "lifetime": 70,
-			"hitEffect": "blastExplosion",
-			"despawnEffect": "blastExplosion",
-			"shootEffect": "shootBig",
-			"smokeEffect": "shootSmallSmoke"
+		name: "helit1-raptor-gun-missile"
+        reload: 80
+        top: true,
+        mirror: true,
+        rotate: true,
+        inaccuracy: 5
+        shake: 2
+        x: 12.25
+        y: -3.5
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 4
+			shotDelay: 5
+		}
+        bullet: {
+            type: MissileBulletType
+            homingPower: 0.25
+            homingRange: 100
+            weaveScale: 6
+            weaveMag: 1.5
+            damage: 45
+            speed: 4
+            width: 8
+            height: 10
+            lifetime: 46
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
         }
-    },
+    }
 	{
 		name: helit2-rapier-rotator
-		reload: 360
-		range: 0
+		alwaysShooting: true
+		display: false
+		controllable: false
+		mirror: false
 		x: 0
 		y: 0
+		reload: 360
 		recoil: 0
 		shootSound: none
-		smokeEffect: none
-		shootEffect: none
-		ejectEffect: none
-		alwaysShooting: true
-		controllable: false
-		top: true
-		mirror: false
-		rotate: false
 		bullet: {
-			"type": "basicBulletType",
-			"width": 0,
-			"height": 0,
-			"hitSize": 0,
-			"createChance": 0,
-			"hitEffect": "none",
-			"explodeEffect": "none",
-			"despawnEffect": "none",
-			"shootEffect": "none",
-			"smokeEffect": "none",
-			"speed": 0,
-			"damage": 0,
-			"lifetime": 0
+			type: BasicBulletType
+			width: 0
+			height: 0
+			speed: 0
+			damage: 0
+			lifetime: 0
+			hitEffect: none
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
 		}
 		parts: [
-	{
-		"x": 0,
-		"y": 0,
-		"moveY": 0,
-		"moveRot": -6120,
-		"type": "regionPart",
-		"progress": "reload",
-		"followRotation": true,
-		"under": false,
-		"top": true,
-		"outline": false,
-		"suffix": "-rotor"
-	},
-	{
-		"x": 0,
-		"y": 0,
-		"moveY": 0,
-		"moveRot": 0,
-		"type": "regionPart",
-		"followRotation": true,
-		"under": false,
-		"top": true,
-		"outline": false,
-		"suffix": "-top"
-	}
+			{
+				type: regionPart
+				suffix: "-rotor"
+				progress: reload
+				moveRot: -6120
+				mirror: false
+				outline: false
+			},
+			{
+				type: regionPart
+				suffix: "-top"
+				mirror: false
+				outline: false
+			}
 		]
 	}
 ]
-"research": {
-		parent: helit1-raptor
-		requirements: [
-		{ item: lead, amount: 4000},
-		{ item: titanium, amount: 4500},
-		{ item: thorium, amount: 2800},
-		{ item: graphite, amount: 2800},
-		{ item: silicon, amount: 3000}
-    	],
-    	objectives: [
-    		factory-unit2-modern-reconstructor-aditive,
-            helit1-raptor
-    	]
-	}
+
+research: {
+	parent: helit1-raptor
+	requirements: [
+		{ item: copper, amount: 8000 }
+		{ item: lead, amount: 5000 }
+		{ item: sigraph, amount: 4000 }
+		{ item: titarium, amount: 3000 }
+	]
+	objectives: [
+		factory-unit2-modern-reconstructor-aditive,
+		helit1-raptor
+	]
+}
