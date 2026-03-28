@@ -7,8 +7,7 @@ Adding more crafters, distribution blocks, drills, items, and new units(include 
 
 ## The Mod Is Still Development
 
-## Supported Languages
-The mod supports English (default) and Bahasa Indonesia.
-
-
-This mod will continue until the day it stops...
+# Supported Languages
+The mod supports:
+## English
+## Bahasa Indonesia
