@@ -5,6 +5,8 @@ A mod that focuses on improving the infrastructure industry which is useful in c
 
 Adding more crafters, distribution blocks, drills, items, and new units(include combat units, and support units).
 
+## The Mod Is Still Development
+
 ## Supported Languages
 The mod supports English (default) and Bahasa Indonesia.
 
