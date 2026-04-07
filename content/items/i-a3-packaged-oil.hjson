@@ -1,0 +1,10 @@
+type: material
+name: Packaged Oil
+cost: 0.3
+color: 313131
+explosiveness: 1.2
+flammability: 1.2
+heatCapacity: 0.7
+viscosity: 0.75
+temperature: 0.5
+research: i-a2-packaged-cryofluid

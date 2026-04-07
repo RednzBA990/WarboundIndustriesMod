@@ -1,0 +1,8 @@
+type: material
+name: Packaged Water
+cost: 0.3
+color: 486ACD
+heatCapacity: 0.40
+viscosity: 0.5
+temperature: 0.5
+research: sigraph

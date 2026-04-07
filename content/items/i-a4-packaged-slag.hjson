@@ -1,0 +1,9 @@
+type: material
+name: Packaged Slag
+cost: 0.4
+color: FFCD66
+flammability: 2
+heatCapacity: 0.5
+viscosity: 0.7
+temperature: 1
+research: i-a3-packaged-oil
