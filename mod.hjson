@@ -2,7 +2,7 @@
   "name": "wi",
   "repo": "RednzBA990/WarboundIndustriesMod",
   "displayName": "[#EA8878[]]Warbound Industries",
-  "subtitle": "V1.9, Random and Resprite update",
+  "subtitle": "v1.92, Remake part 2 Update",
   "author": "Rednz990 [ DC: @red.id9990 ]",
   "description":
   '''
@@ -13,8 +13,11 @@ Adding more crafters, distribution blocks, drills, items, and new units(include 
 [#FFB600[]]BUILD[#AEAEAE[]] - [#FF4C00[]]EXTRACT[#AEAEAE[]] - [#FF00F6[]]CONQUER[#AEAEAE[]].
 
 Support me by starring my Mod Repo!!
+THIS MOD IS STILL DEVELOPMENT
+
+DM me or Chat me in Mindustry Official Server if you find bug!
   '''
-  "version": 1.9,
+  "version": 1.92,
   "minGameVersion": "147",
   "hidden": false
 }
