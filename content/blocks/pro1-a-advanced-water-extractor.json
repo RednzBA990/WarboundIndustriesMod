@@ -1,0 +1,63 @@
+{
+  "name": "Advanced Water Extractor",
+  "type": "SolidPump",
+  "health": 240,
+  "size": 2,
+  "requirements": [
+	{ "item": "lead", "amount": 50},
+	{ "item": "metaglass", "amount": 45},
+	{ "item": "sigraph", "amount": 32},
+	{ "item": "titarium", "amount": 20}
+  ],
+  "drawRegion": true,
+  "result": "water",
+  "attribute": "water",
+  "pumpAmount": 0.3333333333333,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+  {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "water"
+  },
+  {
+    "type": "DrawDefault"
+  },
+  {
+    "type": "DrawRegion",
+    "suffix": "-rotator2",
+    "rotateSpeed": 4,
+    "x": -2,
+    "y": -2,
+    "spinSprite": true
+   },
+  {
+    "type": "DrawRegion",
+    "suffix": "-cover"
+   },
+  {
+    "type": "DrawRegion",
+    "suffix": "-rotator",
+    "rotateSpeed": -5,
+    "spinSprite": true
+		   }
+	    ]
+	},
+  "hasPower": true,
+  "hasItems": false,
+  "hasLiquid": true,
+  "consumes": {
+    "power": 1.5,
+	},
+  "updateEffect": "none",
+  "category": "production",
+  "idleSoundVolume": 0.5,
+  "liquidCapacity": 60,
+  "research": {
+		"researchCostMultiplier": 0.3,
+		"parent": "tech-wi",
+		"objectives": [
+			"water-extractor"
+		]
+   }
+}

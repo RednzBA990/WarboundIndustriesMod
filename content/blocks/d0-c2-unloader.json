@@ -1,0 +1,17 @@
+{
+	"name": "Surge unloader",
+	"description": "Faster than Titanorium Unloader",
+	"type": "Unloader",
+	"buildTime": 120,
+	"health": 360,
+	"speed": 2.4,
+	"requirements": [
+		{"item": "titarium", "amount": 40},
+		{"item": "surge-alloy", "amount": 12}
+	],	
+	"category": "distribution",
+	"research": {
+    	"researchCostMultiplier": 0.6,
+		"parent": "wi-d0-c1-unloader"
+    }
+}

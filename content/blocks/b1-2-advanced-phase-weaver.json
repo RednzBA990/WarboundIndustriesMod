@@ -1,0 +1,51 @@
+{	
+"type": "GenericCrafter",
+"size": 3,
+"drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+   {
+    "type": "drawRegion",
+    "suffix": "-bottom"    
+   },
+   {
+    "type": "DrawWeave"
+   },
+   {
+   "type": "DrawDefault"
+   }
+               ]
+          },
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids": false,
+	"itemCapacity": 40,
+	"craftTime": 270,
+	"craftEffect": "smeltsmoke",
+	"updateEffect": "none",
+    "ambientSound": "techloop",
+    "ambientSoundVolume": 0.03,
+	"consumes": {
+		"power": 6.6666666666666,
+		"items": {
+			"items": [
+               "sand/20",
+               "thorium/12",
+               "sigraph/2"
+			]
+		}
+	},
+	"requirements": [
+	"lead/250",
+    "sigraph/230",
+    "titarium/200",
+    "plastanium/100",
+    "phase-fabric/70"
+	],
+	"category": "crafting",
+	"research": {
+		"researchCostMultiplier": 0.4,
+		"parent": "b1-1-advanced-plastanium-compressor"
+		},
+	"outputItem": "phase-fabric/5"
+}

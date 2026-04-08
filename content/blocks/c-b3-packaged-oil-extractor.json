@@ -1,0 +1,31 @@
+{	
+  "name": "Packaged Oil Extractor",
+  "type": "GenericCrafter",
+  "size": 1,
+	"hasPower": true,
+	"hasItems": true,
+	"outputsLiquid": true,
+	"itemCapacity": 10,
+	"liquidCapacity": 50,
+	"craftTime": 60,
+	"craftEffect": "smeltsmoke",
+    "ambientSound": "loopSteam",
+    "ambientSoundVolume": 0.1,
+	"consumes": {
+		"power": 0.2,
+		"items": [
+			{"item": "i-a3-packaged-oil", "amount": 1 }
+		 ]
+	},
+	 "outputLiquid": "oil/0.8333333333333",
+	"requirements": [
+        "lead/12",
+        "sigraph/8",
+        "metaglass/4"
+	],
+	"category": "crafting",
+	"research": {
+		"requiresUnlock": false,
+		"parent": "c-b2-packaged-cryofluid-extractor"
+	}
+}

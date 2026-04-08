@@ -1,0 +1,26 @@
+type: Reconstructor
+category: units
+size: 5
+consumes: {
+power: 7
+items: [
+sigraph/100
+titarium/80
+]
+}
+constructTime: 2400
+buildTime: 2100
+upgrades: [
+[tankt1-axion, tankt2-aziot],
+[helit1-raptor, helit2-rapier]
+]
+research: {
+parent: wi-factory-unit-modern
+researchCostMultiplier: 0.4
+objectives: [ titarium ]
+}
+requirements: [
+lead/650
+sigraph/450
+titarium/350
+]

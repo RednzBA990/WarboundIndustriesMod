@@ -1,0 +1,30 @@
+type: Reconstructor
+category: units
+size: 7
+consumes: {
+power: 13
+items: [
+sigraph/800
+titarium/750
+plastanium/650
+surge-alloy/50
+	]	
+liquid: cryofluid/1
+}
+constructTime: 5400
+buildTime: 6900
+upgrades: [
+[helit2-rapier, helit3-razor],
+[tankt2-aziot, tankt3-azoph]
+	]
+research: {
+researchCostMultiplier: 0.5
+parent: wi-factory-unit2-modern-reconstructor-aditive
+	}
+requirements: [
+lead/2300
+sigraph/1000
+titarium/850
+phase-fabric/600
+plastanium/450
+]

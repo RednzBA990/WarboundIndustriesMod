@@ -1,0 +1,17 @@
+{
+	"name": "Titanorium unloader",
+	"description": "Faster than standart unloader",
+	"type": "Unloader",
+	"buildTime": 72,
+	"health": 160,
+	"speed": 4,
+	"requirements": [
+		{"item": "titarium", "amount": 35}
+	],	
+	"category": "distribution",
+	"research": {
+    	"researchCostMultiplier": 0.5,
+    	"objectives": [ "unloader" ],
+		"parent": "wi-d1-c1-titarium-conveyor"
+    }
+}

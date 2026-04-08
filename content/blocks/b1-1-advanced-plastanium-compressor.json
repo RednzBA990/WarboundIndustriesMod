@@ -1,0 +1,47 @@
+{	
+"type": "GenericCrafter",
+"size": 3,
+"drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+   {
+    "type": "DrawDefault"
+   },
+   {
+    "type": "DrawFade"
+   }	
+               ]
+          },
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids": true,
+	"itemCapacity": 30,
+    "liquidCapacity": 150,
+	"craftTime": 180,
+	"craftEffect": "formsmoke",
+	"updateEffect": "plasticburn",
+	"consumes": {
+		"power": 6,
+		"items": {
+			"items": [
+               "titanium/13"
+			]
+		},
+       "liquid": {
+			"liquid": "oil",
+			"amount": 0.8333333333333
+		}
+	},
+	"requirements": [
+        "lead/200",
+        "sigraph/185",
+        "titarium/120",
+        "plastanium/100"
+	],
+	"category": "crafting",
+	"research": {
+		"researchCostMultiplier": 0.4,
+		"parent": "titarium-mixer"
+		},
+	"outputItem": "plastanium/10"
+}

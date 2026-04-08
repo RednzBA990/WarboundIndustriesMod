@@ -1,0 +1,43 @@
+{
+ "name": "Modern Unit Factory",
+ "type": "UnitFactory",
+ "health": 360,
+ "size": 3,
+ "buildTime": 300,
+ "requirements": [
+		{ "item": "lead", "amount": 140},
+		{ "item": "sigraph", "amount": 80},
+		{ "item": "titarium", "amount": 20}
+   ],
+ "hasPower": true,
+ "hasItems": true,
+	"consumes": {
+		"power": 1.35
+	},
+	"plans": [
+		{
+    "unit": "tankt1-axion",
+    "requirements": [
+	{ "item": "sigraph", "amount": 40},
+	{ "item": "titarium", "amount": 40}
+		],
+			"time": 1800,
+		},
+		{
+    "unit": "helit1-raptor",
+    "requirements": [
+	{ "item": "sigraph", "amount": 40},
+	{ "item": "titarium", "amount": 40}
+		],
+			"time": 2100,
+		}
+	],
+	"unitCapModifier": 0,
+	"research": {
+	"parent": "tech-wi",
+	"visible": true,
+	"researchCostMultiplier": 0.4,
+	"objectives": [ "sigraph-mixer", "titarium-mixer" ]
+	},
+  	"category": "units"
+}
