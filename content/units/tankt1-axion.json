@@ -1,0 +1,94 @@
+type: tank
+name: Axion
+description: Serpulo basic tank.
+speed: 0.6
+health: 600
+armor: 4
+omniMovement: false
+rotateMoveFirst: true
+rotateSpeed: 3
+treadPullOffset: 5
+rotateShooting: false
+hitSize: 9.5
+range: 160
+itemCapacity: 15
+treadRects: [
+	{
+		type: rect
+		x: -22
+		y: -29
+		width: 14
+		height: 54
+	},
+	{
+		type: rect
+		x: 9
+		y: -29
+		width: 14
+		height: 54
+	}
+]
+weapons: [
+    {
+        name: tankt1-axion-mw
+        reload: 80
+        x: 0
+        y: 0
+        shootY: 11
+        top: true
+        shots: 1
+        shake: 2
+        spacing: 3
+    	innacuracy: 10
+    	rotate: true
+        rotateSpeed: 6
+        mirror: false
+ 	   recoil: 1
+  	  shootSound: shootArtillerySmall
+ 	   ejectEffect: casing2
+        bullet: {
+			type: FlakBulletType
+			damage: 10
+			speed: 3
+			width: 6
+			length: 15
+			lifetime: 53.333333333333
+			splashDamage: 40
+     	   splashDamageRadius: 25
+			shootEffect: shootBig
+			smokeEffect: shootBigSmoke
+			collidesGround: true
+			collidesAir: false
+        }
+    }
+    {
+		name: tankt1-axion-w-sg
+		reload: 10
+		x: 4.5
+		y: -3.5
+		shootSound: shoot
+		ejectEffect: casing1
+		top: true
+		mirror: false
+		rotate: true
+		bullet: {
+			type: basicBulletType
+			width: 7
+			height: 12
+			hitSize: 2
+			speed: 4
+			damage: 13
+			lifetime: 40
+		}
+	}
+]
+	  "research": {
+		parent: factory-unit-modern
+		requirements: [
+		{ item: copper, amount: 800},
+		{ item: lead, amount: 500},
+		{ item: titanium, amount: 500},
+		{ item: graphite, amount: 450},
+		{ item: silicon, amount: 400}
+    	]
+	}

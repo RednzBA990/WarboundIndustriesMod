@@ -1,0 +1,344 @@
+name: Razor
+type: flying
+flying: true
+drawEngine: false
+engineSize: 0
+engineOffset: 0
+armor: 12
+health: 8200
+rotateShooting: true
+lowAltitude: true
+speed: 1.1
+rotateSpeed: 1.8
+accel: 0.08
+drag: 0.08
+targetAir: true
+targetGround: true
+hitSize: 36
+itemCapacity: 80
+range: 192
+aimDst: 192
+weapons: [
+	{
+		name: helit3-razor-w-cg
+		reload: 18
+		x: 6
+		y: 16.75
+		shootSound: shootStell
+		ejectEffect: casing2
+		shake: 1.3
+		top: false
+		mirror: true
+		rotate: false
+		shoot: {
+			type: ShootAlternate
+			shots: 2
+			shotDelay: 4
+			barrels: 1
+		}
+		bullet: {
+			type: FlakBulletType
+			speed: 5
+			width: 7
+			height: 10
+			lifetime: 38.4
+			damage: 20
+			splashDamage: 66
+			collidesGround: true
+			collidesAir: false
+			splashDamageRadius: 32
+    		hitEffect: flakExplosion
+    		despawnEffect: flakExplosion
+		    status: blasted
+  	      lightning: 3
+	        lightningDamage: 10
+  	      lightningLength: 4
+    	    lightningCone: 360
+  	      lightningLengthRand: 6
+			shootEffect: shootBig
+			smokeEffect: shootBigSmoke
+		}
+	}
+    {
+		name: helit3-razor-rotor
+		alwaysShooting: true
+		display: false
+		controllable: false
+		mirror: false
+		x: 0
+		y: 0
+		reload: 360
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: BasicBulletType
+			damage: 0
+			speed: 0
+			lifetime: 0
+			hitEffect: none
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
+		}
+		parts: [
+			{
+				type: regionPart
+				suffix: -cover
+				x: 0
+				y: 0
+				mirror: false
+				top: true
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -blade
+				x: 16
+				y: 0
+				progress: reload
+				moveRot: -6120
+				mirror: false
+				top: true
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -blade
+				x: -16
+				y: 0
+				progress: reload
+				moveRot: -6120
+				mirror: false
+				top: true
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -wing
+				x: 0
+				y: 0
+				mirror: false
+				top: true
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -top
+				x: 0
+				y: 0
+				mirror: false
+				top: true
+				outline: false
+			}
+		]
+	}
+    {
+        reload: 140
+        x: 7.5
+        y: -13
+        baseRotation: -90
+        shootCone: 180
+        rotate: false
+        mirror: false
+        recoil: 3
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 2
+			shotDelay: 4
+			barrels: 1
+		}
+        bullet: {
+            type: MissileBulletType
+            sprite: wi-missile1
+            width: 10
+			height: 10
+            homingPower: 0.2
+            homingDelay: 5
+            homingRange: 160
+            damage: 20
+            splashDamage: 70
+  	  	splashDamageRadius: 32
+  		  status: blasted
+  		  trailLength: 2
+            speed: 4
+            lifetime: 62
+            range: 160
+			hitEffect: {
+				type: multiEffect,
+					effects: [
+					{
+				type: ParticleEffect,
+				particles: 12,
+				sizeFrom: 4,
+				sizeTo: 4,
+				length: 68,
+        		strokeFrom: 5,
+        		strokeTo: 0,
+				lifetime: 27,
+				line: true,
+				interp: linear,
+				followParent: false,
+				colorFrom: FDB380,
+				colorTo: FF9545,
+				cone: 30
+					},
+					{
+				type: ParticleEffect,
+				particles: 18,
+				sizeFrom: 6,
+				sizeTo: 0,
+				length: 80,
+				lifetime: 120,
+				interp: pow3Out,
+				sizeInterp: pow5Out,
+				followParent: false,
+				colorFrom: 787878,
+				colorTo: 787878,
+				lightScl: 0,
+				cone: 30,
+				layer: 101
+					},
+					{
+				type: ParticleEffect,
+				particles: 15,
+				sizeFrom: 4,
+				sizeTo: 0,
+				length: 48,
+				lifetime: 40,
+				interp: pow5Out,
+				sizeInterp: pow5Out,
+				followParent: false,
+				colorFrom: FDB380,
+				colorTo: FDB380
+				},
+					blastExplosion
+				]
+			},
+			despawnEffect: blastExplosion
+        }
+    }
+    {
+        reload: 140
+        x: -7.5
+        y: -13
+        display: false
+        baseRotation: 90
+        shootCone: 180
+        rotate: false
+        mirror: false
+        recoil: 3
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 2
+			shotDelay: 4
+			barrels: 1
+		}
+        bullet: {
+            type: MissileBulletType
+            sprite: wi-missile1
+            width: 10
+			height: 10
+            homingPower: 0.2
+            homingDelay: 4
+            homingRange: 160
+            damage: 20
+            splashDamage: 70
+  	  	splashDamageRadius: 32
+  		  trailLength: 2
+            speed: 4
+            lifetime: 62
+            range: 160
+			hitEffect: {
+				type: multiEffect,
+					effects: [
+					{
+				type: ParticleEffect,
+				particles: 12,
+				sizeFrom: 4,
+				sizeTo: 4,
+				length: 68,
+        		strokeFrom: 5,
+        		strokeTo: 0,
+				lifetime: 27,
+				line: true,
+				interp: linear,
+				followParent: false,
+				colorFrom: FDB380,
+				colorTo: FF9545,
+				cone: 30
+					},
+					{
+				type: ParticleEffect,
+				particles: 18,
+				sizeFrom: 6,
+				sizeTo: 0,
+				length: 80,
+				lifetime: 120,
+				interp: pow3Out,
+				sizeInterp: pow5Out,
+				followParent: false,
+				colorFrom: 787878,
+				colorTo: 787878,
+				lightScl: 0,
+				cone: 30,
+				layer: 101
+					},
+					{
+				type: ParticleEffect,
+				particles: 15,
+				sizeFrom: 4,
+				sizeTo: 0,
+				length: 48,
+				lifetime: 40,
+				interp: pow5Out,
+				sizeInterp: pow5Out,
+				followParent: false,
+				colorFrom: FDB380,
+				colorTo: FDB380
+				},
+					blastExplosion
+				]
+			},
+			despawnEffect: blastExplosion
+        }
+    }
+    {
+		name: helit3-razor-w-lg
+        reload: 47
+        x: 7.5
+        y: 7.5
+        rotate: true
+        rotateSpeed: 6
+        shake: 2.5
+        shootSound: shootEclipse
+        recoil: 3
+        bullet: {
+        type: LaserBulletType
+        damage: 60
+        colors: [ FF7070, FDB380, FFFFFF  ]
+        hitSize: 5
+        lifetime: 16
+        drawSize: 160
+        length: 192
+        pierceCap: 4
+        collidesGround: true
+		collidesAir: false
+        }
+    }
+]
+
+research: {
+	parent: helit2-rapier
+	requirements: [
+		{ item: sigraph, amount: 14000 }
+		{ item: titarium, amount: 12000 }
+		{ item: plastanium, amount: 9000 }
+		{ item: phase-fabric, amount: 8000 }
+		{ item: surge-alloy, amount: 5000 }
+	]
+	objectives: [
+		wi-factory-unit2-modern-reconstructor-multiplicative
+	]
+}

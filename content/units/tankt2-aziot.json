@@ -1,0 +1,226 @@
+type: tank
+name: Aziot
+description: Serpulo tank. T2 from Axion Basic tank.
+speed: 0.7
+health: 1600
+armor: 10
+omniMovement: false
+rotateMoveFirst: false
+forceMultiTarget: true
+rotateSpeed: 1.8
+treadPullOffset: 9
+treadFrames: 16
+rotateShooting: false
+hitSize: 14
+itemCapacity: 60
+range: 176
+immunities: [ melting ]
+treadRects: [
+	{
+		type: rect
+		x: -33
+		y: -38
+		width: 24
+		height: 73
+	},
+	{
+		type: rect
+		x: 10
+		y: -38
+		width: 24
+		height: 73
+	}
+]
+weapons: [
+    {
+		name: tankt2-aziot-sg
+		reload: 13
+		x: 6.75
+		y: -6
+		shootSound: shoot
+		ejectEffect: casing1
+		top: true
+		mirror: true
+		rotate: true
+		bullet: {
+			type: basicBulletType
+			width: 6
+			height: 11
+			hitSize: 2
+			speed: 5
+			damage: 30
+			lifetime: 35.2
+		},
+		shoot: {
+			type: ShootAlternate
+			shots: 2
+			barrels: 1
+			shotDelay: 3
+		}
+	},
+    {
+        name: tankt2-aziot-mw
+        reload: 120
+        x: 0
+        y: 0
+        shootY: 18
+        top: true
+        shake: 3
+        spacing: 3
+    	innacuracy: 10
+    	rotate: true
+        rotateSpeed: 2
+        mirror: false
+ 	   recoil: 1.5
+ 	   ejectEffect: casing2
+  	  shootSound: shootArtillery
+        bullet: {
+			type: FlakBulletType
+			speed: 4
+			width: 9
+			length: 15
+			lifetime: 50
+			pierceArmor: true
+			damage: 20
+			splashDamage: 80
+     	   splashDamageRadius: 32
+            status: melting
+ 	       statusDuration: 480
+ 			hitEffect: {
+				type: multiEffect,
+					effects: [
+				{
+		          "type": "WaveEffect",
+  		        "lifetime": 30,
+		          "sizeFrom": 0,
+      		    "sizeTo": 32,
+        		  "strokeFrom": 5,
+        		  "strokeTo": 0,
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545"
+					},
+					{
+      			  "particles": 16,
+  			      "length": 32,
+			        "lifetime": 40,
+ 			       "sizeFrom": 5,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow3Out",
+  			      "sizeInterp": "linear",
+ 			       "lightScl": 0,
+ 			       "layer": 101
+			        },
+					{
+      			  "particles": 16,
+  			      "length": 28,
+			        "lifetime": 60,
+ 			       "sizeFrom": 7,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow5Out",
+  			      "sizeInterp": "linear",
+ 			       "lightScl": 0,
+ 			       "layer": 101
+			        },
+					{
+				"type": "ParticleEffect",
+				"particles": 18,
+				"sizeFrom": 4,
+				"sizeTo": 4,
+				"length": 32,
+        		"strokeFrom": 5,
+        		"strokeTo": 0,
+				"lifetime": 30,
+				"line": true,
+				"interp": "linear",
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545",
+				"cone": 540
+					}
+				]
+			},
+			shootEffect: {
+				type: multiEffect,
+					effects: [
+					{
+				"type": "ParticleEffect",
+				"particles": 10,
+				"sizeFrom": 4,
+				"sizeTo": 4,
+				"length": 60,
+        		"strokeFrom": 5,
+        		"strokeTo": 0,
+				"lifetime": 27,
+				"line": true,
+				"interp": "linear",
+				"followParent": false,
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545",
+				"cone": 30
+					},
+					{
+      			  "particles": 18,
+  			      "length": 32,
+			        "lifetime": 40,
+ 			       "sizeFrom": 5,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow3Out",
+  			      "sizeInterp": "linear",
+  				  "followParent": false,
+ 			       "lightScl": 0,
+ 			       "layer": 101,
+ 			   	"cone": 35
+			        },
+					shootBig
+				]
+			},
+			smokeEffect: shootBigSmoke
+			collidesGround: true
+			collidesAir: false
+        },
+		parts: [
+		{
+			type: RegionPart
+			suffix: -b
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			top: true
+			moveX: 0
+			moveY: -2
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -top
+			outline: false
+			under: false
+			top: true
+			moveX: 0
+			moveY: 0
+			x: 0
+			y: 0
+			}
+		]
+    }
+]
+	  research: {
+		parent: tankt1-axion
+		requirements: [
+		{ item: copper, amount: 3400},
+		{ item: lead, amount: 2200},
+		{ item: titanium, amount: 2000},
+		{ item: sigraph, amount: 1500},
+		{ item: titarium, amount: 1400}
+    	],
+    	objectives: [
+    		factory-unit2-modern-reconstructor-aditive
+    	]
+	}

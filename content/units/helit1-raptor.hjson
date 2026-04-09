@@ -1,0 +1,128 @@
+name: Raptor
+type: flying
+flying: true
+lowPriority: false
+drawEngine: false
+engineSize: 0
+rotateShooting: true
+lowAltitude: true
+speed: 2.2
+rotateSpeed: 5
+armor: 2
+accel: 0.08
+drag: 0.06
+health: 460
+hitSize: 16
+itemCapacity: 20
+range: 184
+aimDst: 184
+
+weapons: [
+    {
+        name: helit1-raptor-gun
+        reload: 12
+        x: 3.5
+        y: 8.25
+        shootSound: shoot
+        ejectEffect: casing1
+        top: false
+        mirror: true
+        rotate: false
+        bullet: {
+            type: BasicBulletType
+            width: 6
+            height: 8
+            speed: 4
+            collidesGround: true
+            collidesAir: false
+            damage: 20
+            lifetime: 40
+        }
+    }
+    {
+        reload: 36
+        top: false,
+        mirror: true,
+        rotate: false,
+        inaccuracy: 5
+        x: -6
+        y: 1.5
+        shootSound: shootMissile
+        bullet: {
+            type: MissileBulletType
+            homingPower: 0.25
+            homingRange: 60
+            weaveScale: 6
+            weaveMag: 1.5
+            damage: 10
+            splashDamage: 25
+  	  	splashDamageRadius: 24
+  		  status: blasted
+            speed: 3.5
+            width: 6
+            height: 8
+            lifetime: 52.571428571428
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
+        }
+    }
+    {
+        name: helit1-raptor-rotator
+        alwaysShooting: true
+        display: false
+        controllable: false
+        mirror: false
+        x: 0
+        y: 0
+        reload: 360
+        range: 0
+        shootSound: none
+        recoil: 0
+        bullet: {
+            type: basicBulletType
+            damage: 0
+            speed: 0
+            lifetime: 0
+            hitEffect: none
+			explodeEffect: none
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
+        }
+        parts: [
+        	{
+                type: RegionPart
+                suffix: "-cover"
+                outline: false
+                mirror: false
+                under: false
+            },
+            {
+                type: RegionPart
+                suffix: "-rotor-blur"
+                outline: false
+                progress: reload
+                moveRot: -6120
+                mirror: false
+                under: false
+            },
+            {
+                type: RegionPart
+                suffix: "-rotor-top"
+                outline: false
+                mirror: false
+                under: false
+            }
+        ]
+    }
+]
+
+research: {
+    parent: factory-unit-modern
+    requirements: [
+        { item: copper, amount: 4500 }
+        { item: lead, amount: 3000 }
+        { item: silicon, amount: 2000 }
+        { item: titanium, amount: 1500 }
+    ]
+}

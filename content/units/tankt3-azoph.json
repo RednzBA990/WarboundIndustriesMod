@@ -1,0 +1,333 @@
+type: tank
+name: Azoph
+speed: 0.5
+health: 17000
+armor: 15
+omniMovement: false
+rotateMoveFirst: true
+forceMultiTarget: true
+rotateSpeed: 1.4
+treadPullOffset: 5
+rotateShooting: false
+hitSize: 35
+itemCapacity: 90
+range: 240
+treadFrames: 25
+immunities: [ melting, burning, slow ]
+treadRects: [
+	{
+		type: rect
+		x: -58
+		y: 50
+		width: 21
+		height: 36
+	},
+	{
+		type: rect
+		x: 38
+		y: 50
+		width: 21
+		height: 36
+	},
+	{
+		type: rect
+		x: -58
+		y: -85
+		width: 21
+		height: 36
+	},
+	{
+		type: rect
+		x: 38
+		y: -85
+		width: 21
+		height: 36
+	}
+]
+weapons: [
+	{
+		name: tankt3-azoph-mg
+		reload: 13
+		x: 12.5
+		y: 9.5
+		shootSound: shootScepterSecondary
+		top: true
+		mirror: true
+		rotate: true
+		rotateSpeed: 6
+		inaccuracy: 1.2
+		ejectEffect: casing2
+		bullet: {
+			type: basicBulletType
+			shootEffect: shootScepterSecondary
+			hitEffect: hitScepterSecondary
+			collidesGround: true
+			collidesAir: false
+			trailWidth: 2
+			trailLength: 4
+			width: 6
+			height: 11
+			hitSize: 2
+			speed: 6
+			damage: 45
+			lifetime: 36
+		},
+		shoot: {
+			type: ShootAlternate
+			shots: 3
+			shotDelay: 3
+			barrels: 2
+			spreads: 1
+		}
+	},
+	{
+		name: tankt3-azoph-ml
+        reload: 60
+        top: true
+        mirror: true
+        rotate: true
+        shake: 2
+        rotateSpeed: 4
+        inaccuracy: 4
+        x: 12.5
+        y: -8.75
+        ejectEffect: none
+        shootSound: shootMissile
+        bullet: {
+            type: MissileBulletType
+            homingPower: 0.2
+            homingRange: 60
+            weaveScale: 6
+            weaveMag: 1.1
+            damage: 20
+            splashDamage: 60
+  	  	splashDamageRadius: 28
+  		  collidesGround: false
+  		  collidesAir: true
+            speed: 4
+            width: 8
+            height: 8
+            lifetime: 54
+            status: blasted
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
+			shootEffect: shootSmall
+			smokeEffect: shootSmallSmoke
+        },
+        shoot: {
+			type: ShootAlternate
+			shots: 3
+			barrels: 1
+			shotDelay: 8
+		}
+    }
+    {
+        name: tankt3-azoph-mw
+        reload: 240
+        x: 0
+        y: 1
+        shootY: 25
+        recoils: 2
+        top: true
+        shake: 4
+        spacing: 3
+    	innacuracy: 10
+    	rotate: true
+        rotateSpeed: 0.8
+        mirror: false
+ 	   recoil: 1.5
+ 	   ejectEffect: casing3
+  	  shootSound: shootTank
+        bullet: {
+			type: FlakBulletType
+			speed: 6
+			width: 20
+			length: 40
+			shrinkY: 0
+			lifetime: 37
+			backColor: FFCD64
+			frontColor: FDB380
+			pierceArmor: true
+			armorMultiplier: 2.1
+			damage: 20
+			splashDamage: 120
+     	   splashDamageRadius: 48
+			trailEffect: fireSmoke
+            status: melting
+ 	       statusDuration: 840
+ 		   sprite: "wi-projectile1",
+ 			hitEffect: {
+				type: multiEffect,
+					effects: [
+				{
+		          "type": "WaveEffect",
+  		        "lifetime": 30,
+		          "sizeFrom": 0,
+      		    "sizeTo": 48,
+        		  "strokeFrom": 5,
+        		  "strokeTo": 0,
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545"
+					},
+					{
+      			  "particles": 20,
+  			      "length": 48,
+			        "lifetime": 40,
+ 			       "sizeFrom": 5,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow3Out",
+  			      "sizeInterp": "linear",
+ 			       "lightScl": 0,
+ 			       "layer": 101
+			        },
+					{
+      			  "particles": 20,
+  			      "length": 40,
+			        "lifetime": 60,
+ 			       "sizeFrom": 7,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow5Out",
+  			      "sizeInterp": "linear",
+ 			       "lightScl": 0,
+ 			       "layer": 101
+			        },
+					{
+				"type": "ParticleEffect",
+				"particles": 24,
+				"sizeFrom": 4,
+				"sizeTo": 4,
+				"length": 48,
+        		"strokeFrom": 5,
+        		"strokeTo": 0,
+				"lifetime": 30,
+				"line": true,
+				"interp": "linear",
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545",
+				"cone": 540
+					}
+				]
+			},
+			shootEffect: {
+				type: multiEffect,
+					effects: [
+					{
+				"type": "ParticleEffect",
+				"particles": 12,
+				"sizeFrom": 4,
+				"sizeTo": 4,
+				"length": 48,
+        		"strokeFrom": 5,
+        		"strokeTo": 0,
+				"lifetime": 27,
+				"line": true,
+				"interp": "linear",
+				"followParent": false,
+				"colorFrom": "FDB380",
+				"colorTo": "FF9545",
+				"cone": 15
+					},
+					{
+      			  "particles": 24,
+  			      "length": 48,
+			        "lifetime": 40,
+ 			       "sizeFrom": 5,
+  			      "sizeTo": 0,
+ 			       "colorFrom": "787878",
+			        "colorTo": "787878",
+			        "interp": "pow3Out",
+  			      "sizeInterp": "linear",
+  				  "followParent": false,
+ 			       "lightScl": 0,
+ 			       "layer": 101,
+ 			   	"cone": 15
+			        },
+					{
+					"region": "wi-vertical-shockwave1",
+      			  "particles": 1,
+  			      "length": 14,
+			        "lifetime": 80,
+ 			       "sizeFrom": 16,
+  			      "sizeTo": 16,
+ 			       "colorFrom": "787878",
+			        "colorTo": "78787800",
+			        "interp": "linear",
+  			      "sizeInterp": "linear",
+  				  "followParent": false,
+ 			       "lightScl": 0,
+ 			   	"cone": 0
+			        },
+					shootBig
+				]
+			},
+			smokeEffect: shootBigSmoke
+			collidesGround: true
+			collidesAir: false
+        },
+		shoot: {
+			type: ShootAlternate
+			barrels: 2
+			shots: 2
+			spreads: 7
+			shotDelay: 40
+		},
+		parts: [
+		{
+			type: RegionPart
+			suffix: -br
+			recoilIndex: 1
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			top: true
+			moveX: 0
+			moveY: -4
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -bl
+			recoilIndex: 0
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			top: true
+			moveX: 0
+			moveY: -4
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -top
+			outline: false
+			under: false
+			top: true
+			moveX: 0
+			moveY: 0
+			x: 0
+			y: 0
+			}
+		]
+    }
+]
+	  research: {
+		parent: tankt2-aziot
+		requirements: [
+		{ item: sigraph, amount: 14000 }
+		{ item: titarium, amount: 12000 }
+		{ item: plastanium, amount: 9000 }
+		{ item: phase-fabric, amount: 8000 }
+		{ item: surge-alloy, amount: 5000 }
+    	],
+    	objectives: [
+    		wi-factory-unit2-modern-reconstructor-multiplicative
+    	]
+	}

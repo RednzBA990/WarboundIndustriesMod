@@ -1,0 +1,198 @@
+name: Rapier
+type: flying
+flying: true
+drawEngine: false
+engineSize: 0
+engineOffset: 0
+armor: 5
+health: 1200
+rotateShooting: true
+lowAltitude: true
+speed: 2.0
+rotateSpeed: 3
+accel: 0.06
+drag: 0.06
+targetAir: true
+targetGround: true
+hitSize: 21
+itemCapacity: 40
+range: 192
+aimDst: 192
+
+weapons: [
+	{
+		name: helit2-rapier-w-bg
+		reload: 8
+		x: 5.25
+		y: 11
+		shootSound: shoot
+		ejectEffect: casing2
+		top: false
+		mirror: true
+		rotate: false
+		bullet: {
+			type: BasicBulletType
+			width: 8
+			height: 10
+			collidesGround: true
+			collidesAir: false
+			speed: 5
+			damage: 35
+			lifetime: 38.4
+		}
+	}
+	{
+		alwaysShooting: false
+		display: false
+		controllable: false
+		mirror: false
+		x: 0
+		y: 0
+		reload: 0
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: BasicBulletType
+			width: 0
+			height: 0
+			speed: 0
+			damage: 0
+			lifetime: 0
+			hitEffect: none
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
+		}
+		parts: [
+			{
+				type: regionPart
+				suffix: helit2-rapier-w-cover
+				mirror: false
+				outline: false
+			}
+		]
+	}
+	{
+		name: helit2-rapier-w-cg
+		reload: 45
+		x: 6
+		y: 1.5
+		shootSound: shootStell
+		ejectEffect: casing3
+		shake: 1.5
+		rotateSpeed: 2.8
+		top: true
+		mirror: true
+		rotate: true
+		shoot: {
+			type: ShootAlternate
+			shots: 2
+			barrels: 1
+			shotDelay: 4
+		}
+		bullet: {
+			type: FlakBulletType
+			speed: 4
+			width: 8
+			height: 10
+			lifetime: 45
+			damage: 10
+			splashDamage: 40
+			splashDamageRadius: 24
+			status: blasted
+			collidesGround: true
+			collidesAir: false
+			shootEffect: shootBig
+			smokeEffect: shootBigSmoke
+		}
+	}
+	{
+        reload: 90
+        top: true,
+        mirror: true,
+        rotate: false,
+        inaccuracy: 5
+        shake: 2
+        x: 5.25
+        y: 11
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 2
+			shotDelay: 5
+		}
+        bullet: {
+            type: MissileBulletType
+            homingPower: 0.25
+            homingRange: 100
+            weaveScale: 6
+            weaveMag: 1.5
+            splashDamage: 60
+			splashDamageRadius: 30
+			status: blasted
+			collidesGround: false
+			collidesAir: true
+            damage: 20
+            speed: 3.6
+            width: 8
+            height: 10
+            lifetime: 50
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
+        }
+    }
+	{
+		name: helit2-rapier-rotator
+		alwaysShooting: true
+		display: false
+		controllable: false
+		mirror: false
+		x: 0
+		y: 0
+		reload: 360
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: BasicBulletType
+			width: 0
+			height: 0
+			speed: 0
+			damage: 0
+			lifetime: 0
+			hitEffect: none
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
+		}
+		parts: [
+			{
+				type: regionPart
+				suffix: "-rotor"
+				progress: reload
+				moveRot: -6120
+				mirror: false
+				outline: false
+			},
+			{
+				type: regionPart
+				suffix: "-top"
+				mirror: false
+				outline: false
+			}
+		]
+	}
+]
+
+research: {
+	parent: helit1-raptor
+	requirements: [
+		{ item: copper, amount: 8000 }
+		{ item: lead, amount: 5000 }
+		{ item: sigraph, amount: 4000 }
+		{ item: titarium, amount: 3000 }
+	]
+	objectives: [
+		factory-unit2-modern-reconstructor-aditive,
+		helit1-raptor
+	]
+}
