@@ -1,7 +1,7 @@
 {
 	"type": "flying",
     "name": "Nold",
-    "controller": "mindustry.ai.types.BuilderAI",
+    // DefaultController: DefenderAI <== Defender Ai, Follow and guard nearby units.
     "flying": true,
 	"hitSize": 13.5,
 	"health": 200,
@@ -32,6 +32,7 @@
 				"x": 0,
 				"y": 0.25,
 				"shootY": 4,
+				"noAttack": true,
 				"mirror": false,
 				"targetUnits": true,
 				"targetBuildings": true,

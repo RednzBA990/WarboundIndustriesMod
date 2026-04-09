@@ -3,7 +3,7 @@
     "name": "Node",
     "description": "A small nano drone can helping you to built building.",
     "flying": true,
-    "controller": "mindustry.ai.types.BuilderAI",
+    // DefaultController: BuilderAI <== Ai for Builder, like for Player unit.
 	"hitSize": 6,
 	"health": 80,
 	"mineRange": 70,
