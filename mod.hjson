@@ -2,7 +2,7 @@
   "name": "wi",
   "repo": "RednzBA990/WarboundIndustriesMod",
   "displayName": "[#EA8878[]]Warbound Industries",
-  "subtitle": "v1.92, Remake part 2 Update",
+  "subtitle": "v1.93, Fix bug, and Remake part 2 Update",
   "author": "Rednz990 [ DC: @red.id9990 ]",
   "description":
   '''
@@ -17,7 +17,7 @@ THIS MOD IS STILL DEVELOPMENT
 
 DM me or Chat me in Mindustry Official Server if you find bug!
   '''
-  "version": 1.92,
+  "version": 1.93,
   "minGameVersion": "147",
   "hidden": false
 }
