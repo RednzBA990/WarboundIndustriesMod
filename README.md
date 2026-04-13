@@ -15,4 +15,4 @@ The mod supports:
 - **Bahasa Indonesia**
 
 ### Thank You for Download!
-<img width="600" height="600" alt="162576" src="https://cdn.discordapp.com/attachments/996014056811016273/1490356722278203543/petpet_1.gif" />
+<img width="498" height="498" alt="160761" src="https://github.com/user-attachments/assets/2de77bba-1616-486a-8692-525fe5da5301" />
