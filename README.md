@@ -2,6 +2,7 @@
 
 ## WarboundIndustries Mod✨
 Redefining Industrial Warfare and Logistics Efficiency.
+<img width="1040" height="76" alt="162594" src="https://github.com/user-attachments/assets/1fa21e16-b741-452f-8b80-b9cf105358c4" />
 
 A mod that focuses on improving the infrastructure industry which is useful in campaign mode.
 
