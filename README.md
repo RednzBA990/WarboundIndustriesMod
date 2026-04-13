@@ -7,6 +7,8 @@ Redefining Industrial Warfare and Logistics Efficiency.
 A mod that focuses on improving the infrastructure industry which is useful in campaign mode.
 
 Adding more crafters, distribution blocks, drills, items, and new units(include combat units, and support units).
+<img width="1205" height="76" alt="162596" src="https://github.com/user-attachments/assets/b2c0776e-e377-4b9b-ae38-88de3ff25905" />
+
 
 **The Mod Is Still Development**
 
