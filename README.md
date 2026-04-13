@@ -13,3 +13,6 @@ Adding more crafters, distribution blocks, drills, items, and new units(include 
 The mod supports:
 - **English**
 - **Bahasa Indonesia**
+
+### Thank You for Download!
+<img width="600" height="600" alt="162576" src="https://cdn.discordapp.com/attachments/996014056811016273/1490356722278203543/petpet_1.gif" />
