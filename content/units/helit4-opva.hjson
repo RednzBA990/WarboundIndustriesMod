@@ -1,0 +1,441 @@
+name: Opva
+type: flying
+flying: true
+engineSize: 0
+engineOffset: 0
+armor: 14
+health: 25000
+lowAltitude: true
+speed: 0.8
+rotateSpeed: 1.3
+accel: 0.08
+drag: 0.08
+targetAir: true
+targetGround: true
+hitSize: 39
+itemCapacity: 120
+immunities: [ melting, burning, slow ]
+
+range: 256
+maxRange: 256
+
+parts: [
+			{
+				type: HoverPart
+				x: 21
+				y: 4
+				radius: 20
+				phase: 180
+				stroke: 3
+				sides: 8
+				mirror: true
+				layerOffset: -0.001
+				color: FFA665
+	}
+	{
+				type: HoverPart
+				x: 20
+				y: 14
+				radius: 16
+				phase: 180
+				stroke: 2
+				sides: 6
+				mirror: true
+				layerOffset: -0.001
+				color: FFA665
+	}
+]
+
+weapons: [
+	{
+		name: helit4-opva-w-gg
+		reload: 3
+		x: 0
+		y: 34.5
+		shootSound: shoot
+		ejectEffect: casing2
+		top: false
+		mirror: false
+		rotate: false
+		recoil: 1
+		recoilTime: 10
+		velocityRnd: 0.2
+		bullet: {
+			type: BasicBulletType
+			inaccuracy: 6
+			width: 7
+			height: 13
+			collidesGround: true
+			collidesAir: true
+			speed: 5
+			damage: 34
+			lifetime: 44.8
+			hitEffect: {
+				type: multiEffect
+					effects: [
+					{
+		          type: WaveEffect
+  		        lifetime: 8
+		          sizeFrom: 0
+      		    sizeTo: 12
+        		  strokeFrom: 2
+        		  strokeTo: 0
+	  			colorFrom: FFD27E
+		  		colorTo: FFD27E
+					}
+					{
+				type: ParticleEffect
+				particles: 5
+				sizeFrom: 2
+				sizeTo: 2
+				length: 12
+        		strokeFrom: 3
+        		strokeTo: 0
+				lifetime: 12
+				line: true
+				interp: linear
+				followParent: false
+				colorFrom: FFD27E
+				colorTo: FFD27E
+				cone: 15
+					}
+				]
+			}
+		}
+	}
+    {
+		name: helit4-opva-rot
+		alwaysShooting: true
+		display: false
+		controllable: false
+		mirror: false
+		x: 0
+		y: 0
+		reload: 600
+		recoil: 0
+		shootSound: none
+		bullet: {
+			type: BasicBulletType
+			damage: 0
+			speed: 0
+			lifetime: 0
+			hitEffect: none
+			instantDisappear: true
+			despawnEffect: none
+			shootEffect: none
+			smokeEffect: none
+		}
+		parts: [		
+			{
+				type: regionPart
+				suffix: -wing
+				x: 0
+				y: 0
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -gg-cover
+				x: 0
+				y: 0
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -rotor1
+				x: 20
+				y: 14
+				progress: reload
+				moveRot: -2700
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -rotor1
+				x: -20
+				y: 14
+				progress: reload
+				moveRot: -2700
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -top1
+				x: 0
+				y: 0
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -rotor2
+				x: 21
+				y: 4
+				progress: reload
+				moveRot: -1800
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -rotor2
+				x: -21
+				y: 4
+				progress: reload
+				moveRot: -1800
+				mirror: false
+				outline: false
+			}
+			{
+				type: regionPart
+				suffix: -top2
+				x: 0
+				y: 0
+				mirror: false
+				outline: false
+			}
+		]
+	}
+	{
+		name: helit4-opva-w-sa
+		reload: 40
+		x: -12.25
+		y: 11
+		shootX: 1
+		shootY: 12.75
+		shootSound: shootArtillery
+		ejectEffect: casing3
+		shake: 2
+		recoil: 4
+		top: true
+		mirror: true
+		rotate: false
+		velocityRnd: 0.2
+		shoot: {
+			type: ShootAlternate
+			shots: 2
+			shotDelay: 4
+			barrels: 1
+		}
+		bullet: {
+			type: ArtilleryBulletType
+			speed: 5
+			width: 12
+			height: 15
+			lifetime: 51.2
+			damage: 25
+			splashDamage: 80
+			collidesGround: true
+			collidesAir: false
+			knockback: 6
+			inaccuracy: 6
+			splashDamageRadius: 32
+    		hitEffect: {
+				type: multiEffect
+					effects: [
+					{
+		          type: WaveEffect
+  		        lifetime: 13
+		          sizeFrom: 0
+      		    sizeTo: 32
+        		  strokeFrom: 5
+        		  strokeTo: 0
+	  			colorFrom: FFD27E
+		  		colorTo: FFD27E
+					}
+					{
+				type: ParticleEffect
+				particles: 8
+				sizeFrom: 4
+				sizeTo: 4
+				length: 38
+        		strokeFrom: 5
+        		strokeTo: 0
+				lifetime: 27
+				line: true
+				interp: linear
+				followParent: false
+				colorFrom: FFD27E
+				colorTo: FFD27E
+					}
+					{
+				type: ParticleEffect
+				particles: 8
+				sizeFrom: 6
+				sizeTo: 0
+				length: 45
+				lifetime: 120
+				interp: pow3Out
+				sizeInterp: pow5Out
+				followParent: false
+				colorFrom: 787878
+				colorTo: 787878
+				lightScl: 0
+				layer: 101
+					}
+					{
+				type: ParticleEffect
+				particles: 8
+				sizeFrom: 4
+				sizeTo: 0
+				length: 32
+				lifetime: 40
+				interp: pow5Out
+				sizeInterp: pow5Out
+				followParent: false
+				colorFrom: FFD27E
+				colorTo: FFD27E
+				}
+					flakExplosion
+				]
+			}
+		    status: blasted
+  	      lightning: 4
+	        lightningDamage: 16
+  	      lightningLength: 4
+    	    lightningCone: 360
+  	      lightningLengthRand: 6
+			shootEffect: shootBig
+			smokeEffect: shootBigSmoke
+		}
+	}
+    {
+        reload: 64
+        x: 8.5
+        y: -14.5
+        baseRotation: -45
+        shootCone: 360
+        rotate: false
+        alternate: false
+        mirror: true
+        recoils: 2
+        recoil: 2
+        shootSound: shootMissile
+        recoilTime: 8
+        parts: [
+        	{
+			type: RegionPart
+			suffix: helit4-opva-w-ml-bo
+			outline: false
+			mirror: false
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: helit4-opva-w-ml-mr
+			recoilIndex: 1
+			progress: recoil
+			outline: false
+			mirror: false
+			moveX: 0
+			moveY: -3
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: helit4-opva-w-ml-ml
+			recoilIndex: 0
+			progress: recoil
+			outline: false
+			mirror: false
+			moveX: 0
+			moveY: -3
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: helit4-opva-w-ml
+			outline: false
+			mirror: false
+			x: 0
+			y: 0
+			}
+		]
+        shoot: {
+			type: ShootAlternate
+			shots: 4
+			shotDelay: 4
+			barrels: 2
+		}
+        bullet: {
+            type: MissileBulletType
+            inaccuracy: 10
+            sprite: wi-helit4-opva-missile
+            width: 3
+			height: 5
+            damage: 30
+            splashDamage: 60
+  	  	splashDamageRadius: 32
+  		  status: blasted
+  		  trailLength: 8
+  		  trailWidth: 1.5
+            speed: 3
+            lifetime: 34
+            range: 224
+            maxRange: 224
+            rangeOverride: 224
+			hitEffect: none
+			fragRandomSpread: 0
+			fragBullets: 1
+			homingPower: 0.2
+   	     homingDelay: 12
+   	     homingRange: 160
+			despawnEffect: {
+				type: multiEffect
+					effects: [
+					{
+				type: ParticleEffect
+				particles: 6
+				sizeFrom: 4
+				sizeTo: 0
+				length: -16
+				cone: -15
+				lifetime: 60
+				interp: pow3Out
+				sizeInterp: pow5Out
+				followParent: false
+				colorFrom: 787878
+				colorTo: 787878
+				lightScl: 0
+				layer: 101
+					}
+				]
+			}
+			despawnHit: true
+			fragBullet: {
+				type: MissileBulletType
+     	       sprite: wi-helit4-opva-missile
+     	       width: 3
+				height: 5
+				followAimSpeed: 8
+   	         damage: 30
+   	         splashDamage: 60
+  		  	splashDamageRadius: 32
+  			  status: blasted
+  			  trailLength: 8
+  			  trailWidth: 1.5
+   	         speed: 8
+   	         lifetime: 54
+   	         range: 224
+   	         maxRange: 224
+   	         rangeOverride: 224
+				hitEffect: blastExplosion
+			}
+        }
+    }
+]
+
+research: {
+	parent: helit3-razor
+	researchCostMultiplier: 1.2
+	objectives: [
+		wi-factory-unit2-modern-reconstructor-multiplicative
+	]
+}

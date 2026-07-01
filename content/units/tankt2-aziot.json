@@ -10,8 +10,7 @@ forceMultiTarget: true
 rotateSpeed: 1.8
 treadPullOffset: 9
 treadFrames: 16
-rotateShooting: false
-hitSize: 14
+hitSize: 20
 itemCapacity: 60
 range: 176
 immunities: [ melting ]
@@ -66,8 +65,6 @@ weapons: [
         shootY: 18
         top: true
         shake: 3
-        spacing: 3
-    	innacuracy: 10
     	rotate: true
         rotateSpeed: 2
         mirror: false
@@ -75,10 +72,11 @@ weapons: [
  	   ejectEffect: casing2
   	  shootSound: shootArtillery
         bullet: {
-			type: FlakBulletType
+			type: BasicBulletType
 			speed: 4
 			width: 9
-			length: 15
+            height: 18
+			shrinkY: 0
 			lifetime: 50
 			pierceArmor: true
 			damage: 20
@@ -191,7 +189,6 @@ weapons: [
 			heatProgress: recoil
 			outline: false
 			under: false
-			top: true
 			moveX: 0
 			moveY: -2
 			x: 0
@@ -202,7 +199,6 @@ weapons: [
 			suffix: -top
 			outline: false
 			under: false
-			top: true
 			moveX: 0
 			moveY: 0
 			x: 0

@@ -1,58 +1,44 @@
 type: tank
-name: Azoph
-speed: 0.5
-health: 9800
+name: Aztroxh
+speed: 0.3
+health: 28000
 armor: 15
 omniMovement: false
 rotateMoveFirst: true
 forceMultiTarget: true
-rotateSpeed: 1.4
-treadPullOffset: 5
-hitSize: 28
-itemCapacity: 90
-range: 240
-treadFrames: 25
+rotateSpeed: 1.1
+hitSize: 35
+itemCapacity: 280
+range: 336
 immunities: [ melting, burning, slow ]
 treadRects: [
 	{
 		type: rect
-		x: -57
-		y: 39
-		width: 28
-		height: 34
+		x: 32
+		y: -102
+		width: 41
+		height: 204
 	},
 	{
 		type: rect
-		x: 30
-		y: 39
-		width: 28
-		height: 34
-	},
-	{
-		type: rect
-		x: -57
-		y: -72
-		width: 28
-		height: 34
-	},
-	{
-		type: rect
-		x: 30
-		y: -72
-		width: 28
-		height: 34
+		x: 32
+		y: -32
+		width: 58
+		height: 64
 	}
 ]
 weapons: [
 	{
-		name: tankt3-azoph-mg
-		reload: 18
-		x: 10.75
-		y: 9.5
+		name: tankt4-aztroxh-w-aa
+		reload: 32
+		x: 22.25
+		y: -8
 		shootSound: shootScepterSecondary
 		top: true
 		mirror: true
 		rotate: true
+		baseRotation: -45
+		shootY: 7
 		rotateSpeed: 6
 		inaccuracy: 1.2
 		ejectEffect: casing2
@@ -61,98 +47,125 @@ weapons: [
 			shootEffect: shootScepterSecondary
 			hitEffect: hitScepterSecondary
 			collidesGround: true
-			collidesAir: false
+			collidesAir: true
 			trailWidth: 2
-			trailLength: 4
-			width: 6
-			height: 11
+			trailLength: 6
+			width: 8
+			height: 14
 			hitSize: 2
 			speed: 6
-			damage: 22
-			lifetime: 36
+			damage: 33
+			lifetime: 40
 		},
 		shoot: {
 			type: ShootAlternate
-			shots: 3
-			shotDelay: 3
+			shots: 4
+			shotDelay: 4
 			barrels: 2
-		}
+		},
+		parts: [
+		{
+			type: RegionPart
+			suffix: -r
+			recoilIndex: 1
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			heatLight: true
+			moveX: 0
+			moveY: -2
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -l
+			recoilIndex: 0
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			heatLight: true
+			moveX: 0
+			moveY: -2
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -top
+			outline: false
+			under: false
+			moveX: 0
+			moveY: 0
+			x: 0
+			y: 0
+			}
+		]
 	},
-	{
-		name: tankt3-azoph-ml
-        reload: 60
-        top: true
-        mirror: true
-        rotate: true
-        shake: 2
-        rotateSpeed: 4
-        inaccuracy: 4
-        x: 10.75
-        y: -7.25
-        ejectEffect: none
-        shootSound: shootMissile
-        bullet: {
-            type: MissileBulletType
-            homingPower: 0.2
-            homingRange: 60
-            weaveScale: 6
-            weaveMag: 1.1
-            damage: 20
-            splashDamage: 60
-  	  	splashDamageRadius: 28
-  		  collidesGround: false
-  		  collidesAir: true
-            speed: 4
-            width: 8
-            height: 8
-            lifetime: 54
-            status: blasted
-			hitEffect: blastExplosion
-			despawnEffect: blastExplosion
-			shootEffect: shootSmall
-			smokeEffect: shootSmallSmoke
-        },
-        shoot: {
-			type: ShootAlternate
-			shots: 3
-			barrels: 1
-			shotDelay: 8
-		}
-    }
     {
-        name: tankt3-azoph-mw
-        reload: 240
+        name: tankt4-aztroxh-w
+        reload: 360
         x: 0
         y: 0
-        shootY: 20
-        recoils: 2
+        shootY: 0
+        recoils: 3
         top: true
-        shake: 4
+        shake: 6
     	rotate: true
-        rotateSpeed: 0.8
+        rotateSpeed: 0.6
         mirror: false
- 	   recoil: 1.5
- 	   ejectEffect: casing3
+ 	   recoil: 3
+ 	   ejectEffect: casing4
   	  shootSound: shootTank
         bullet: {
 			type: BasicBulletType
-			speed: 6
-			width: 15
+			speed: 4
+			width: 18
             height: 40
 			shrinkY: 0
-			lifetime: 37
+			lifetime: 84
 			backColor: FFCD64
 			frontColor: FDB380
 			hittable: false
-			pierceCap: 2
+			pierceCap: 3
 			pierceBuilding: true
 			pierceArmor: true
-			damage: 120
-			splashDamage: 120
-     	   splashDamageRadius: 48
-			trailEffect: fireSmoke
+			damage: 140
+			splashDamage: 140
+     	   splashDamageRadius: 64
+     	   fragBullets: 4
+     	   fragBullet: {
+				type: BasicBulletType
+     	       width: 5
+				height: 5
+   	         damage: 30
+   	         splashDamage: 60
+  		  	splashDamageRadius: 32
+  			  status: blasted
+   	         speed: 4
+   	         lifetime: 20
+				hitEffect: blastExplosion
+			}
+			trailEffect: {
+      			  "particles": 5,
+  			      "length": -25,
+			        "lifetime": 80,
+ 			       "sizeFrom": 2,
+  			      "sizeTo": 4,
+ 			       "colorFrom": "787878",
+			        "colorTo": "78787800",
+			        "interp": "linear",
+  			      "sizeInterp": "linear",
+  				  "followParent": false,
+  				  "useRotation": true,
+ 			       "lightScl": 0,
+ 			   	"cone": -15
+			},
+			trailChance: 0.2
             status: melting
- 	       statusDuration: 840
+ 	       statusDuration: 1440
  			hitEffect: {
 				type: multiEffect,
 					effects: [
@@ -160,17 +173,17 @@ weapons: [
 		          "type": "WaveEffect",
   		        "lifetime": 20,
 		          "sizeFrom": 0,
-      		    "sizeTo": 48,
-        		  "strokeFrom": 5,
+      		    "sizeTo": 64,
+        		  "strokeFrom": 7,
         		  "strokeTo": 0,
 				"colorFrom": "FDB380",
 				"colorTo": "FF9545"
 					},
 					{
-      			  "particles": 20,
-  			      "length": 48,
+      			  "particles": 30,
+  			      "length": 64,
 			        "lifetime": 40,
- 			       "sizeFrom": 5,
+ 			       "sizeFrom": 7,
   			      "sizeTo": 0,
  			       "colorFrom": "787878",
 			        "colorTo": "787878",
@@ -180,10 +193,10 @@ weapons: [
  			       "layer": 101
 			        },
 					{
-      			  "particles": 20,
-  			      "length": 40,
+      			  "particles": 30,
+  			      "length": 55,
 			        "lifetime": 60,
- 			       "sizeFrom": 7,
+ 			       "sizeFrom": 9,
   			      "sizeTo": 0,
  			       "colorFrom": "787878",
 			        "colorTo": "787878",
@@ -194,11 +207,11 @@ weapons: [
 			        },
 					{
 				"type": "ParticleEffect",
-				"particles": 24,
-				"sizeFrom": 4,
-				"sizeTo": 4,
-				"length": 48,
-        		"strokeFrom": 5,
+				"particles": 28,
+				"sizeFrom": 6,
+				"sizeTo": 6,
+				"length": 68,
+        		"strokeFrom": 7,
         		"strokeTo": 0,
 				"lifetime": 30,
 				"line": true,
@@ -214,11 +227,11 @@ weapons: [
 					effects: [
 					{
 				"type": "ParticleEffect",
-				"particles": 12,
-				"sizeFrom": 4,
-				"sizeTo": 4,
-				"length": 48,
-        		"strokeFrom": 5,
+				"particles": 20,
+				"sizeFrom": 5,
+				"sizeTo": 5,
+				"length": 64,
+        		"strokeFrom": 7,
         		"strokeTo": 0,
 				"lifetime": 27,
 				"line": true,
@@ -226,13 +239,13 @@ weapons: [
 				"followParent": false,
 				"colorFrom": "FDB380",
 				"colorTo": "FF9545",
-				"cone": 15
+				"cone": 18
 					},
 					{
-      			  "particles": 24,
-  			      "length": 48,
+      			  "particles": 28,
+  			      "length": 55,
 			        "lifetime": 40,
- 			       "sizeFrom": 5,
+ 			       "sizeFrom": 7,
   			      "sizeTo": 0,
  			       "colorFrom": "787878",
 			        "colorTo": "787878",
@@ -241,15 +254,15 @@ weapons: [
   				  "followParent": false,
  			       "lightScl": 0,
  			       "layer": 101,
- 			   	"cone": 15
+ 			   	"cone": 18
 			        },
 					{
 					"region": "wi-vertical-shockwave1",
       			  "particles": 1,
-  			      "length": 14,
-			        "lifetime": 80,
- 			       "sizeFrom": 16,
-  			      "sizeTo": 16,
+  			      "length": 18,
+			        "lifetime": 120,
+ 			       "sizeFrom": 18,
+  			      "sizeTo": 18,
  			       "colorFrom": "787878",
 			        "colorTo": "78787800",
 			        "interp": "linear",
@@ -266,35 +279,55 @@ weapons: [
 			collidesAir: false
         },
 		shoot: {
-			type: ShootAlternate
-			barrels: 2
-			shots: 2
-			shotDelay: 40
+			type: ShootBarrel
+			shots: 3
+			shotDelay: 45
+			barrels: [
+				-7.25, 36, 0
+				0, 36, 0
+				7.25, 36, 0
+			]
 		},
 		parts: [
 		{
 			type: RegionPart
-			suffix: -br
-			recoilIndex: 1
+			suffix: -b-r
+			recoilIndex: 2
 			progress: recoil
 			heatProgress: recoil
 			outline: false
 			under: false
+			heatLight: true
 			moveX: 0
-			moveY: -4
+			moveY: -6
 			x: 0
 			y: 0
 			}
 			{
 			type: RegionPart
-			suffix: -bl
+			suffix: -b-m
+			recoilIndex: 1
+			progress: recoil
+			heatProgress: recoil
+			outline: false
+			under: false
+			heatLight: true
+			moveX: 0
+			moveY: -6
+			x: 0
+			y: 0
+			}
+			{
+			type: RegionPart
+			suffix: -b-l
 			recoilIndex: 0
 			progress: recoil
 			heatProgress: recoil
 			outline: false
 			under: false
+			heatLight: true
 			moveX: 0
-			moveY: -4
+			moveY: -6
 			x: 0
 			y: 0
 			}
@@ -312,15 +345,9 @@ weapons: [
     }
 ]
 	  research: {
-		parent: tankt2-aziot
-		requirements: [
-		{ item: sigraph, amount: 14000 }
-		{ item: titarium, amount: 12000 }
-		{ item: plastanium, amount: 9000 }
-		{ item: phase-fabric, amount: 8000 }
-		{ item: surge-alloy, amount: 5000 }
-    	],
+		parent: tankt3-azoph
+		researchCostMultiplier: 1.2
     	objectives: [
-    		wi-factory-unit2-modern-reconstructor-multiplicative
+    		wi-factory-unit2-modern-reconstructor2-exponential
     	]
 	}

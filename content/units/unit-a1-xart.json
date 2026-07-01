@@ -1,0 +1,154 @@
+type: legs
+name: Xart
+  research: atrax
+  speed: 0.8
+  hitSize: 19
+  health: 1800
+  armor: 4
+  drag: 0.4
+  faceTarget: true
+  range: 32
+  flying: false
+  rotateSpeed: 3
+  legCount: 6
+  legSpeed: 3
+  legMaxLength: 1
+  legMinLength: 1
+  legLengthScl: 1.2
+  legForwardScl: 1.2
+  legExtension: 5
+  legStraightness: 0.8
+  legSplashDamage: 20
+  legSplashRange: 24
+  legPhysicsLayer: true
+  legContinuousMove: true
+  lockLegBase: true
+  targetAir: false
+  stepShake: 1.2
+  rippleScale: 1.3
+  legBaseOffset: 9
+  legMoveSpace: 0.9
+  legLength: 24
+  allowLegStep: true
+  hovering: true
+  groundLayer: 75
+  weapons: [
+    {
+        reload: 60
+        x: 0
+        y: 0
+        shootCone: 360
+        top: true
+    	rotate: true
+        mirror: false
+        shootOnDeath: true
+        aiControllable: false
+        controllable: false
+        noAttack: true
+        bullet: {
+			type: ExplosionBulletType
+			speed: 6
+			lifetime: 1
+			damage: 180
+			splashDamage: 250
+     	   splashDamageRadius: 80
+            status: melting
+ 	       statusDuration: 840
+			shootEffect: none
+			smokeEffect: none
+			collidesGround: true
+			collidesAir: true
+			shootEffect: [
+		    {
+ 			   type: ExplosionEffect
+ 			   waveRad: 100
+ 			   waveLife: 100
+ 			   waveColor: bf92f9
+  			  sparks: 12
+   			 sparkLen: 6.5
+   			 sparkStroke: 2
+  			  sparkColor: bf92f9
+  			  sparkRad: 100
+ 			   smokes: 20
+				}
+			]
+							}
+						}
+						{
+        reload: 60
+        x: 0
+        y: 0
+        shootY: 16
+        shootCone: 10
+        recoil: 0
+        recoilTime: 40
+        top: false
+    	rotate: false
+        mirror: false
+        shoot: {
+        	firstShotDelay: 30
+        }
+        parts: [
+  	  {
+  	    type: RegionPart
+  	    suffix: unit-a1-xart-w-claw
+  	    progress: warmup
+  		heatProgress: warmup
+  		heatColor: AA00FF
+  	    moveRot: -10
+  	    mirror: true
+  	    moves: [
+  	      {
+  	        type: PartMove
+  	        progress: recoil
+  	        x: 0
+  	        y: 2
+  	        rot: 25
+  	      }
+  	    ]
+  	  }
+	    {
+  	    type: RegionPart
+  	    suffix: unit-a1-xart-w-top
+  		outline: false
+  	  }
+  	]
+        bullet: {
+			type: BasicBulletType
+			hittable: false
+			absorbable: false
+			reflectable: false
+			speed: 6
+			width: 0
+			length: 0
+			lifetime: 2
+			damage: 80
+			splashDamage: 45
+     	   splashDamageRadius: 24
+            range: 32
+            maxRange: 32
+            rangeOverride: 32
+ 		   hitEffect: {
+ 				type: multiEffect
+					effects: [
+						{
+					region: wi-arrow1
+      			  particles: 1
+  			      length: 16
+			        lifetime: 10
+ 			       sizeFrom: 8
+  			      sizeTo: 0
+ 			       colorFrom: AA00FF
+  				  followParent: false
+ 			   	cone: 0
+			        }
+				]
+			}
+			shootEffect: none
+			smokeEffect: none
+			despawnEffect: none
+			collidesGround: true
+			collidesAir: false
+			}
+	    }
+	]

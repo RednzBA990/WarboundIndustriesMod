@@ -1,12 +1,10 @@
-name: Rapier
+name: Arier
 type: flying
 flying: true
-drawEngine: false
 engineSize: 0
 engineOffset: 0
 armor: 5
 health: 1200
-rotateShooting: true
 lowAltitude: true
 speed: 2.0
 rotateSpeed: 3
@@ -16,8 +14,9 @@ targetAir: true
 targetGround: true
 hitSize: 21
 itemCapacity: 40
+
 range: 192
-aimDst: 192
+maxRange: 192
 
 weapons: [
 	{
@@ -149,7 +148,7 @@ weapons: [
 		mirror: false
 		x: 0
 		y: 0
-		reload: 360
+		reload: 600
 		recoil: 0
 		shootSound: none
 		bullet: {
@@ -160,6 +159,7 @@ weapons: [
 			damage: 0
 			lifetime: 0
 			hitEffect: none
+			instantDisappear: true
 			despawnEffect: none
 			shootEffect: none
 			smokeEffect: none
@@ -169,7 +169,7 @@ weapons: [
 				type: regionPart
 				suffix: "-rotor"
 				progress: reload
-				moveRot: -6120
+				moveRot: -1800
 				mirror: false
 				outline: false
 			},

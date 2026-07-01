@@ -1,10 +1,7 @@
-name: Raptor
+name: Rotpa
 type: flying
 flying: true
-lowPriority: false
-drawEngine: false
 engineSize: 0
-rotateShooting: true
 lowAltitude: true
 speed: 2.2
 rotateSpeed: 5
@@ -14,8 +11,9 @@ drag: 0.06
 health: 460
 hitSize: 16
 itemCapacity: 20
+
 range: 184
-aimDst: 184
+maxRange: 184
 
 weapons: [
     {
@@ -74,8 +72,7 @@ weapons: [
         mirror: false
         x: 0
         y: 0
-        reload: 360
-        range: 0
+        reload: 600
         shootSound: none
         recoil: 0
         bullet: {
@@ -84,7 +81,7 @@ weapons: [
             speed: 0
             lifetime: 0
             hitEffect: none
-			explodeEffect: none
+            instantDisappear: true
 			despawnEffect: none
 			shootEffect: none
 			smokeEffect: none
@@ -102,7 +99,7 @@ weapons: [
                 suffix: "-rotor-blur"
                 outline: false
                 progress: reload
-                moveRot: -6120
+                moveRot: -1800
                 mirror: false
                 under: false
             },

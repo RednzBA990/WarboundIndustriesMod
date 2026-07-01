@@ -1,12 +1,10 @@
-name: Razor
+name: Zora
 type: flying
 flying: true
-drawEngine: false
 engineSize: 0
 engineOffset: 0
 armor: 12
 health: 8200
-rotateShooting: true
 lowAltitude: true
 speed: 1.1
 rotateSpeed: 1.8
@@ -16,8 +14,10 @@ targetAir: true
 targetGround: true
 hitSize: 36
 itemCapacity: 80
+
 range: 192
-aimDst: 192
+maxRange: 192
+
 weapons: [
 	{
 		name: helit3-razor-w-cg
@@ -67,7 +67,7 @@ weapons: [
 		mirror: false
 		x: 0
 		y: 0
-		reload: 360
+		reload: 600
 		recoil: 0
 		shootSound: none
 		bullet: {
@@ -76,6 +76,7 @@ weapons: [
 			speed: 0
 			lifetime: 0
 			hitEffect: none
+			instantDisappear: true
 			despawnEffect: none
 			shootEffect: none
 			smokeEffect: none
@@ -87,7 +88,6 @@ weapons: [
 				x: 0
 				y: 0
 				mirror: false
-				top: true
 				outline: false
 			}
 			{
@@ -96,9 +96,8 @@ weapons: [
 				x: 16
 				y: 0
 				progress: reload
-				moveRot: -6120
+				moveRot: -2700
 				mirror: false
-				top: true
 				outline: false
 			}
 			{
@@ -107,9 +106,8 @@ weapons: [
 				x: -16
 				y: 0
 				progress: reload
-				moveRot: -6120
+				moveRot: -2700
 				mirror: false
-				top: true
 				outline: false
 			}
 			{
@@ -118,7 +116,6 @@ weapons: [
 				x: 0
 				y: 0
 				mirror: false
-				top: true
 				outline: false
 			}
 			{
@@ -127,20 +124,20 @@ weapons: [
 				x: 0
 				y: 0
 				mirror: false
-				top: true
 				outline: false
 			}
 		]
 	}
     {
+    	name: helit3-razor-w-ml
         reload: 140
         x: 7.5
         y: -13
-        baseRotation: -90
+        baseRotation: -45
         shootCone: 180
         rotate: false
         mirror: false
-        recoil: 3
+        recoil: 2
         shootSound: shootMissile
         shoot: {
 			type: ShootAlternate
@@ -153,17 +150,21 @@ weapons: [
             sprite: wi-missile1
             width: 10
 			height: 10
-            homingPower: 0.2
-            homingDelay: 5
+            homingPower: 0.3
+            homingDelay: 4
             homingRange: 160
             damage: 20
             splashDamage: 70
   	  	splashDamageRadius: 32
   		  status: blasted
-  		  trailLength: 2
-            speed: 4
-            lifetime: 62
-            range: 160
+  		  trailLength: 8
+            speed: 6
+            lifetime: 50
+            collidesGround: true
+			collidesAir: false
+            range: 192
+            maxRange: 192
+            rangeOverride: 192
 			hitEffect: {
 				type: multiEffect,
 					effects: [
@@ -219,15 +220,16 @@ weapons: [
         }
     }
     {
+    	name: helit3-razor-w-ml
         reload: 140
         x: -7.5
         y: -13
         display: false
-        baseRotation: 90
+        baseRotation: 45
         shootCone: 180
         rotate: false
         mirror: false
-        recoil: 3
+        recoil: 2
         shootSound: shootMissile
         shoot: {
 			type: ShootAlternate
@@ -240,16 +242,20 @@ weapons: [
             sprite: wi-missile1
             width: 10
 			height: 10
-            homingPower: 0.2
+            homingPower: 0.3
             homingDelay: 4
             homingRange: 160
             damage: 20
             splashDamage: 70
   	  	splashDamageRadius: 32
-  		  trailLength: 2
-            speed: 4
-            lifetime: 62
-            range: 160
+  		  trailLength: 8
+            speed: 6
+            lifetime: 50
+            collidesGround: true
+			collidesAir: false
+            range: 192
+            maxRange: 192
+            rangeOverride: 192
 			hitEffect: {
 				type: multiEffect,
 					effects: [
@@ -325,6 +331,82 @@ weapons: [
         pierceCap: 4
         collidesGround: true
 		collidesAir: false
+      	  }
+        }
+        {
+        reload: 140
+        x: -7.5
+        y: -13
+        display: false
+        baseRotation: 135
+        shootCone: 180
+        rotate: false
+        mirror: false
+        recoil: 3
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 3
+			shotDelay: 3
+			barrels: 1
+		}
+        bullet: {
+            type: MissileBulletType
+            width: 7
+			height: 10
+            homingPower: 0.3
+            homingDelay: 4
+            homingRange: 160
+            damage: 20
+            splashDamage: 48
+  	  	splashDamageRadius: 24
+  		  trailLength: 8
+            speed: 6
+            lifetime: 50
+            hitEffect: blastExplosion
+            range: 192
+            maxRange: 192
+            rangeOverride: 192
+            collidesGround: false
+			collidesAir: true
+        }
+    }
+    {
+        reload: 140
+        x: 7.5
+        y: -13
+        display: false
+        baseRotation: -135
+        shootCone: 180
+        rotate: false
+        mirror: false
+        recoil: 3
+        shootSound: shootMissile
+        shoot: {
+			type: ShootAlternate
+			shots: 3
+			shotDelay: 3
+			barrels: 1
+		}
+        bullet: {
+            type: MissileBulletType
+            width: 7
+			height: 10
+            homingPower: 0.3
+            homingDelay: 4
+            homingRange: 160
+            damage: 20
+            splashDamage: 48
+  	  	splashDamageRadius: 24
+  		  trailLength: 8
+            speed: 6
+            lifetime: 50
+            hitEffect: blastExplosion
+            range: 192
+            maxRange: 192
+            rangeOverride: 192
+            collidesGround: false
+			collidesAir: true
         }
     }
 ]

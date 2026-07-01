@@ -1,0 +1,27 @@
+{
+    "name": "Ackdro",
+    "description": "Liquid delivery drone.",
+    "flying": true,
+	"type": "tether",
+	"hitSize": 14,
+	"health": 130,
+	"range": 0,
+	"itemCapacity": 14,
+	"speed": 3,
+	"rotateSpeed": 9,
+	"lowAltitude": false,
+	"drawItems": false,
+	"accel": 0.1,
+	"drag": 0.07,
+    "engineSize": 3,
+    "engineOffset": 7,
+	"defaultController": "CargoAI",
+    "isEnemy": false,
+    "allowedInPayloads": false,
+    "logicControllable": false,
+    "playerControllable": false,
+      "research": {
+  	"parent": "d1-a1-packaged-liquid-cargo-delivery-load",
+  	"requiresUnlock": false
+  }
+}

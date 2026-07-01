@@ -3,13 +3,12 @@
     "description": "A faster delivery drone.",
     "flying": true,
 	"type": "tether",
-	"hitSize": 7,
+	"hitSize": 9,
 	"health": 200,
 	"range": 0,
 	"itemCapacity": 150,
 	"speed": 5,
 	"rotateSpeed": 8,
-	"rotateShooting": false,
 	"accel": 0.1,
 	"drag": 0.07,
     "engineSize": 3,
@@ -18,7 +17,7 @@
     "isEnemy": false,
     "allowedInPayloads": false,
     "logicControllable": false,
-    "playerControllable": false
+    "playerControllable": false,
       "research": {
   	"parent": "caero",
   	"requiresUnlock": false,

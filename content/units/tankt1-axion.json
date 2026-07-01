@@ -8,8 +8,7 @@ omniMovement: false
 rotateMoveFirst: true
 rotateSpeed: 3
 treadPullOffset: 5
-rotateShooting: false
-hitSize: 9.5
+hitSize: 16
 range: 160
 itemCapacity: 15
 treadRects: [
@@ -36,10 +35,7 @@ weapons: [
         y: 0
         shootY: 11
         top: true
-        shots: 1
         shake: 2
-        spacing: 3
-    	innacuracy: 10
     	rotate: true
         rotateSpeed: 6
         mirror: false
@@ -47,12 +43,15 @@ weapons: [
   	  shootSound: shootArtillerySmall
  	   ejectEffect: casing2
         bullet: {
-			type: FlakBulletType
+			type: BasicBulletType
 			damage: 10
 			speed: 3
 			width: 6
-			length: 15
+            height: 15
+            shrinkY: 0
 			lifetime: 53.333333333333
+			hitEffect: blastExplosion
+			despawnEffect: blastExplosion
 			splashDamage: 40
      	   splashDamageRadius: 25
 			shootEffect: shootBig
