@@ -1,6 +1,6 @@
 {
     "type": "UnitCargoLoader",
-    "name": "Packaged Liquid Drone Loader",
+    "name": "Liquid Drone Loader",
     "description": "Constructs Packaged Liquid cargo drones. Drones automatically distribute items to Unloading Points with a matching filter. Only accept Packaged Liquid.",
 
     "size": 2,
