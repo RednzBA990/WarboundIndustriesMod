@@ -1,6 +1,6 @@
 {
     "type": "UnitCargoUnloadPoint",
-    "name": "Packaged Liquid Drone Unloader",
+    "name": "Liquid Drone Unloader",
     "description": "Acts as unloading point for cargo drones. Accepts items that match the selected filter. Only accept Packaged Liquid.",
 
     "size": 2,
