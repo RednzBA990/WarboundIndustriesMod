@@ -2,13 +2,31 @@
   "name": "wi",
   "repo": "RednzBA990/WarboundIndustriesMod",
   "displayName": "[#EA8878[]]Warbound Industries",
-  "subtitle": "v1.93, Fix bug, and Remake part 2 Update",
-  "author": "Rednz990 [ DC: @red.id9990 ]",
+  "subtitle": "v2-global-betaTest, Moar Stuff Update",
+  "author": '''
+[ Main Developer ]
+Renn [ DC: @red.id9990 ] = Main mod creator
+
+[ Bundle ]
+BlazingGear [ DC: @justtbg_ ] = Russian translator
+
+[ Content Idea - Balancer ]
+Slyly [ DC: @tnmspiroctsub ] = Content balancer
+( Retired )
+''',
   "description":
   '''
-[#AEAEAE[]]A mod that focuses on improving the infrastructure industry which is useful in campaign mode.
+This is a JavSscript Mod an adding random stuff into ingame! support Campaign too.
+Main content is QOL(Quality Of Life), but adding new Assault unit and Support unit.
+THIS MOD IS SERPULO ONLY
 
-Adding more crafters, distribution blocks, drills, items, and new units(include combat units, and support units) to support your gameplay!
+QOL content include:
+-Hybrid Junction,
+-One Way Liquid Unloader,
+-Liquid can be Distributed via Drone,
+-Delivery Drone, and More!
+
+This mod supports English, Bahasa Indonesia, and Russian.
 
 [#FFB600[]]BUILD[#AEAEAE[]] - [#FF4C00[]]EXTRACT[#AEAEAE[]] - [#FF00F6[]]CONQUER[#AEAEAE[]].
 
@@ -16,8 +34,9 @@ Support me by starring my Mod Repo!!
 THIS MOD IS STILL DEVELOPMENT
 
 DM me or Chat me in Mindustry Official Server if you find bug!
+All name and content in this Mod its just Fiction.
   '''
-  "version": 1.93,
+  "version": 2-global-betaTest,
   "minGameVersion": "147",
   "hidden": false
 }
