@@ -1,0 +1,26 @@
+{	
+  "name": "Liquid Unloader",
+    "type": "Wall",
+    "size": 1,
+    "buildTime": 120,
+	"hasLiquids": true,
+	"outputsLiquid": true,
+	"liquidCapacity": 200,
+	"update": true,
+	"clearOnDoubleTap": true,
+	"saveConfig": true,
+	"configurable": true,
+	"alwaysReplace": true,
+	"rotate": true,
+    "quickRotate": true,
+	"requirements": [
+        "sigraph/30",
+        "thorium/15",
+        "surge-alloy/5"
+	],
+	"category": "liquid",
+	"research": {
+		"researchCostMultiplier": 0.5,
+		"parent": "category-a5-liquid"
+	}
+}

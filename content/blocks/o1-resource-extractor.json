@@ -9,6 +9,10 @@
     "type": "drawRegion",
     "suffix": "-bottom"    
     },
+    {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "liquid-a1-minerial"
+  },
   {
     "type": "DrawLiquidTile",
     "drawLiquid": "water"
@@ -31,38 +35,34 @@
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
-	"attribute": "sand",
 	"liquidCapacity": 60,
 	"itemCapacity": 30,
-	"craftTime": 8,
-	"craftEffect": "smeltsmoke",
+	"craftTime": 12,
     "ambientSound": "loopExtract",
     "ambientSoundVolume": 3,
 	"consumes": {
 		"power": 3,
-        "liquid": {
-			"liquid": "water",
-			"amount": 0.5
-		}
+        "liquids": [
+			"water/0.5",
+			"liquid-a1-minerial/0.3"
+		]
 	},
 	 "results": [
 		"copper/5",
 		"lead/4",
 		"graphite/3",
-		"silicon/3",
-		"thorium/3",
 		"titanium/3"
     ],
 	"requirements": [
-        "lead/100",
-        "copper/100",    
-        "titanium/80",
-        "sigraph/50"
+        "lead/200",
+        "copper/200",    
+        "titanium/100",
+        "sigraph/60"
 	],
-	"category": "crafting",
+	"category": "production",
 	"research": {
 			"researchCostMultiplier": 0.3,
-			"parent": "tech-wi",
+			"parent": "category-a3-drill",
 		    "objectives": [
 				"silicon-smelter",
 				"graphite-press",

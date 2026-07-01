@@ -1,15 +1,15 @@
 {
-	"name": "Titarium drill",
+	"name": "Titanorium drill",
 	"type": "Drill",
 	"size": 2,
 	"tier": 5,
-	"drillTime": 120,
+	"drillTime": 126,
 	"buildTime": 192,
 	"health": 230,
 	"rotateSpeed": 2,
 	"warmupSpeed": 0.008,
-	"liquidBoostIntensity": 1.7,
-	"hardnessDrillMultiplier": 0.5,
+	"liquidBoostIntensity": 1.4,
+	"hardnessDrillMultiplier": 1,
 	"liquidCapacity": 35,
 	"drillEffect": "mine",
 	"consumes": {
@@ -27,8 +27,8 @@
 	],
 	"category": "production",
 	"research": {
-		"researchCostMultiplier": 0.3,
-		"parent": "tech-wi",
+		"researchCostMultiplier": 0.4,
+		"parent": "category-a3-drill",
 		"objectives": [ "pneumatic-drill" ]
 	}
 }

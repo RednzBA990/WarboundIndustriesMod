@@ -1,5 +1,4 @@
 type: Wall
-name: Titarium Wall
 description: Protecting the building from enemy projectiles, heavily armored.
 size: 1
 armor: 2
@@ -8,6 +7,6 @@ buildTime: 25
 requirements: [
   titarium/10
 ]
-research: tech-wi
+research: category-a7-defend
 researchCostMultiplier: 0.5
 category: defense

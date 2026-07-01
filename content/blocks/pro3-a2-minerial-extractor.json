@@ -1,0 +1,50 @@
+{
+  "name": "Minerial Extractor",
+  "health": 200,
+  "size": 2,
+  "requirements": [
+	{ "item": "lead", "amount": 85},
+	{ "item": "metaglass", "amount": 75},
+	{ "item": "sigraph", "amount": 60},
+	{ "item": "titanium", "amount": 60}
+  ],
+  "result": "liquid-a1-minerial",
+  "attribute": "none",
+  "pumpAmount": 0.35,
+  "liquidCapacity": 42,
+  "drawer": {
+    "type": "DrawMulti",
+    "drawers": [
+  {
+    "type": "DrawDefault"
+  },
+  {
+    "type": "DrawLiquidTile",
+    "drawLiquid": "liquid-a1-minerial"
+  },
+  {
+    "type": "DrawRegion",
+    "suffix": "-rotator",
+    "rotateSpeed": 5,
+    "spinSprite": true
+  },
+  {
+    "type": "DrawRegion",
+    "suffix": "-top"
+		   }
+	    ]
+	},
+  "hasPower": true,
+  "hasItems": false,
+  "hasLiquids": true,
+  "consumes": {
+    "power": 1.8
+	},
+  "updateEffect": "none",
+  "category": "production",
+  "research": {
+		"researchCostMultiplier": 0.5,
+		"parent": "category-a3-drill",
+		"objectives": [ "pro3-a1-material-press" ]
+   }
+}

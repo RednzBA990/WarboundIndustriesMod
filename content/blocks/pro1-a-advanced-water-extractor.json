@@ -9,7 +9,6 @@
 	{ "item": "sigraph", "amount": 32},
 	{ "item": "titarium", "amount": 20}
   ],
-  "drawRegion": true,
   "result": "water",
   "attribute": "water",
   "pumpAmount": 0.3333333333333,
@@ -45,17 +44,16 @@
 	},
   "hasPower": true,
   "hasItems": false,
-  "hasLiquid": true,
+  "hasLiquids": true,
   "consumes": {
     "power": 1.5,
 	},
   "updateEffect": "none",
   "category": "production",
-  "idleSoundVolume": 0.5,
   "liquidCapacity": 60,
   "research": {
 		"researchCostMultiplier": 0.3,
-		"parent": "tech-wi",
+		"parent": "category-a3-drill",
 		"objectives": [
 			"water-extractor"
 		]

@@ -22,7 +22,7 @@
 	"hasPower": true,
 	"hasItems": true,
 	"itemCapacity": 20,
-	"craftTime": 45,
+	"craftTime": 60,
 	"buildTime": 360,
 	"craftEffect": "smeltsmoke",
     "ambientSound": "loopSmelter",
@@ -35,7 +35,7 @@
 		 ]
 	},
 	 "outputItems": [ 
-			{ "item": "sigraph", "amount": 2}
+			{ "item": "sigraph", "amount": 4}
 		 ],
 	"requirements": [
         "lead/120",
@@ -45,7 +45,7 @@
 	],
 	"category": "crafting",
 	"research": {
-		"parent": "tech-wi",
+		"parent": "category-a8-crafter",
 		"objectives": [ "graphite-press" ],
 		"requirements": [
  	       "lead/320",

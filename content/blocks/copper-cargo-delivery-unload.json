@@ -7,7 +7,7 @@
     "health": 120,
 
     "itemCapacity": 100,
-    "liquidCapacity": 0,
+    "liquidCapacity": 200,
     "separateItemCapacity": true,
     "requirements": 
     [
@@ -17,16 +17,16 @@
     "category": "distribution",
 
     "hasItems": true,
-    "hasLiquids": false,
-    "outputsLiquid": false,
-    "outputItems": true,
+    "hasLiquids": true,
+    "outputsLiquid": true,
+    "update": true,
     "buildTime": 140,
 
-  research: {
-  parent: tech-wi
-  requirements: [
-    copper/350
-    lead/175
+  "research": {
+  "parent": "copper-cargo-delivery-load",
+  "requirements": [
+    "copper/350",
+    "lead/175"
   ]
 }
 }

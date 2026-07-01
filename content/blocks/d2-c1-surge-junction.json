@@ -1,0 +1,17 @@
+{
+ "type": "junction",
+ "name": "Surge Junction",
+ "health": 160,
+ "speed": 36,
+ "displayedSpeed": 18,
+ "capacity": 20,
+ "size": 1,
+ "requirements": [
+  "titarium/6",
+  "surge-alloy/5"
+ ], 
+ "research": {
+    "parent":"d2-c1-surge-router"
+  },
+ "category": "distribution"
+ }

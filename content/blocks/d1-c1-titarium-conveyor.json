@@ -1,6 +1,6 @@
 {
 	"type": "Conveyor",
-	"name": "Titarium conveyor",
+	"name": "Titanorium conveyor",
 	"health": 345,
 	"buildTime": 6,
 	"requirements": [
@@ -12,9 +12,6 @@
 	"displayedSpeed": 21.0,
 	"research": {
 		"researchCostMultiplier": 0.4,
-		"parent": "tech-wi",
-		"objectives": [
-			"titarium"
-		]
+		"parent": "category-a2-distribution"
    }
 }

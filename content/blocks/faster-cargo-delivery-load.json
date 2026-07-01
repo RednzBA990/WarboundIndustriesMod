@@ -8,26 +8,32 @@
 
     "unitType": "surg",
     "itemCapacity": 150,
+    "liquidCapacity": 240,
     "separateItemCapacity": true,
     "requirements": 
     [
-    	"lead/100",
-		"sigraph/80",
+    	"sigraph/85",
+		"titarium/65",
+		"plastanium/20",
 		"surge-alloy/50"
 	],
     "category": "distribution",
 
-    "buildTime": 400,
+    "buildTime": 450,
 
     "hasItems": true,
     "hasPower": true,
-    "hasLiquids": false,
+    "hasLiquids": true,
     "consumes":
     {
-        "power": 3
+        "power": 3,
+        "liquid": {
+			"liquid": "cryofluid",
+			"amount": 0.4
+		}
   }
     "research": {
  	 "parent": "copper-cargo-delivery-load",
- 	 "researchCostMultiplier": 0.3
+ 	 "researchCostMultiplier": 0.4
 	}
 }

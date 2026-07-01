@@ -34,10 +34,10 @@
 	],
 	"unitCapModifier": 0,
 	"research": {
-	"parent": "tech-wi",
+	"parent": "category-a9-unit",
 	"visible": true,
 	"researchCostMultiplier": 0.4,
-	"objectives": [ "sigraph-mixer", "titarium-mixer" ]
+	"objectives": [ "sigraph-mixer", "titarium-mixer", "ground-factory", "air-factory" ]
 	},
   	"category": "units"
 }

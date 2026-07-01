@@ -1,5 +1,4 @@
 type: Wall
-name: Large Titarium Wall
 description: Protecting the building from enemy projectiles, heavily armored.
 size: 2
 armor: 3

@@ -1,0 +1,33 @@
+type: Reconstructor
+category: units
+enableDrawStatus: false
+size: 9
+consumes: {
+power: 15
+items: [
+sigraph/1400
+titarium/950
+plastanium/800
+surge-alloy/300
+phase-fabric/150
+	]	
+liquid: cryofluid/2.2
+}
+constructTime: 14400
+buildTime: 8400
+upgrades: [
+[tankt3-azoph, tankt4-aztroxh]
+[helit3-razor, helit4-opva]
+	]
+research: {
+researchCostMultiplier: 0.6
+parent: wi-factory-unit2-modern-reconstructor-multiplicative
+objectives: [ exponential-reconstructor]
+	}
+requirements: [
+sigraph/2000
+titarium/1400
+phase-fabric/750
+plastanium/650
+surge-alloy/500
+]

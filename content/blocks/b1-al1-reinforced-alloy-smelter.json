@@ -36,7 +36,7 @@
 		 ]
 	},
 	 "outputItems": [ 
-			{ "item": "surge-alloy", "amount": 5}
+			{ "item": "surge-alloy", "amount": 8}
 		 ],
 	"requirements": [
         "lead/160",

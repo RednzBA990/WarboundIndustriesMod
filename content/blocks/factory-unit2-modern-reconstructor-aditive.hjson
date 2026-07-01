@@ -12,12 +12,14 @@ constructTime: 2400
 buildTime: 2100
 upgrades: [
 [tankt1-axion, tankt2-aziot],
-[helit1-raptor, helit2-rapier]
+[helit1-raptor, helit2-rapier],
+[nold, nosr],
+[atrax, unit-a1-xart]
 ]
 research: {
 parent: wi-factory-unit-modern
 researchCostMultiplier: 0.4
-objectives: [ titarium ]
+objectives: [ titarium, additive-reconstructor ]
 }
 requirements: [
 lead/650

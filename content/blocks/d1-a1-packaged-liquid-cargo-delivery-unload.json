@@ -1,0 +1,32 @@
+{
+    "type": "UnitCargoUnloadPoint",
+    "name": "Packaged Liquid Drone Unloader",
+    "description": "Acts as unloading point for cargo drones. Accepts items that match the selected filter. Only accept Packaged Liquid.",
+
+    "size": 2,
+    "health": 160,
+	
+    "itemCapacity": 14,
+    "liquidCapacity": 700,
+    "configurable": true,
+    "saveConfig": true,
+    "allowConfigInventory": false,
+    "unloadable": false,
+    "requirements": 
+    [
+		"lead/60",
+		"graphite/45",
+		"metaglass/25"
+	],
+    "category": "liquid",
+
+    "hasItems": true,
+    "hasLiquids": true,
+    "outputsLiquid": true,
+    "update": true,
+    "buildTime": 70,
+
+  "research": {
+  "parent": "d1-a1-packaged-liquid-cargo-delivery-load"
+	}
+}

@@ -1,41 +1,22 @@
 {
-"type": "ConsumeGenerator",
 "name": "Hydroelectric Generator",
 "size": 2,
 "hasPower": true,
 "hasItems": false,
 "hasLiquids": true,
-"powerProduction": 2,
-"ambientSound": "loopMachineSpin",
-"ambientSoundVolume": 3,
-"liquidCapacity": 35,
+"outputsLiquid": true,
+"liquidCapacity": 120,
 "drawer": {
   "type": "DrawMulti",
   "drawers": [
     {
       "type": "drawRegion",
       "suffix": "-bottom"
-      },  
-   {
-      "type": "DrawLiquidTile",
-      "drawLiquid": "water",
-      "suffix": "-liquid"
     },
-    {
-    "type": "DrawRegion",
-    "suffix": "-rotator",
-    "rotateSpeed": 3
-   },
     {
       "type": "DrawDefault"
     }
   ]
-},
-"consumes": {
-  "liquid": {
-    "liquid": "water",
-    "amount": 0.25
-	}
 },
 "category": "power",
 "requirements": [
@@ -46,8 +27,8 @@
         "silicon/30"
 	],
 	"research": {
-		"researchCostMultiplier": 0.3,
-		"parent": "tech-wi",
-		"objectives": [ "steam-generator" ]
+		"researchCostMultiplier": 0.5,
+		"parent": "category-a6-power",
+		"objectives": [ "steam-generator", "conduit" ]
 	}
 }

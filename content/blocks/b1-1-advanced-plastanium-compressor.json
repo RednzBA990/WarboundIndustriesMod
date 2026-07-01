@@ -29,7 +29,7 @@
 		},
        "liquid": {
 			"liquid": "oil",
-			"amount": 0.8333333333333
+			"amount": 0.3333333333333
 		}
 	},
 	"requirements": [
@@ -41,7 +41,8 @@
 	"category": "crafting",
 	"research": {
 		"researchCostMultiplier": 0.4,
-		"parent": "titarium-mixer"
+		"parent": "titarium-mixer",
+		"objectives": [ "plastanium-compressor" ]
 		},
-	"outputItem": "plastanium/10"
+	"outputItem": "plastanium/12"
 }

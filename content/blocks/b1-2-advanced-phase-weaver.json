@@ -45,7 +45,8 @@
 	"category": "crafting",
 	"research": {
 		"researchCostMultiplier": 0.4,
-		"parent": "b1-1-advanced-plastanium-compressor"
+		"parent": "b1-1-advanced-plastanium-compressor",
+		"objectives": [ "phase-weaver" ]
 		},
-	"outputItem": "phase-fabric/5"
+	"outputItem": "phase-fabric/6"
 }

@@ -11,6 +11,10 @@
     },
   {
     "type": "DrawLiquidTile",
+    "drawLiquid": "liquid-a1-minerial"
+  },
+  {
+    "type": "DrawLiquidTile",
     "drawLiquid": "water"
   },
   {
@@ -31,20 +35,18 @@
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
-	"attribute": "sand",
 	"liquidCapacity": 200,
 	"itemCapacity": 200,
 	"craftTime": 1,
 	"buildTime": 3600,
-	"craftEffect": "smeltsmoke",
     "ambientSound": "loopExtract",
     "ambientSoundVolume": 8,
 	"consumes": {
 		"power": 7,
-        "liquid": {
-			"liquid": "water",
-			"amount": 1.6666666666666
-		}
+        "liquids": [
+			"water/1.6",
+			"liquid-a1-minerial/1.2"
+		]
 	},
 	"results": [
 		"copper/7",
@@ -64,7 +66,7 @@
         "plastanium/350",
         "surge-alloy/250"
 	],
-	"category": "crafting",
+	"category": "production",
 	"research": {
 		"researchCostMultiplier": 0.4,
 		"parent": "o2-extreme-resource-extractor"

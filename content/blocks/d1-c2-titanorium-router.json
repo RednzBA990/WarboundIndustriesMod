@@ -1,0 +1,17 @@
+{
+ "type": "router",
+ "name": "Titanorium Router",
+ "health": 80,
+ "speed": 12,
+ "capacity": 4,
+ "itemCapacity": 4,
+ "size": 1,
+ "requirements": [
+  "titarium/6"
+ ],
+ "research": {
+    "parent":"d1-c1-titarium-conveyor",
+	"objectives": [ "router" ]
+  },
+ "category": "distribution"
+}

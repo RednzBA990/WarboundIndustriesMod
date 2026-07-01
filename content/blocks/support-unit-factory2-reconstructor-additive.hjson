@@ -15,6 +15,7 @@ upgrades: [
 ]
 research: {
 parent: wi-support-unit-factory
+objectives: [ additive-reconstructor ]
 requirements: [
 copper/1400
 lead/1200

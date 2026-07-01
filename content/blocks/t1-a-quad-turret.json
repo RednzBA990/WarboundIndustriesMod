@@ -1,6 +1,6 @@
 {
     type: ItemTurret
-    name: Quad
+    name: Repeater
     targetAir: true
     targetGround: true
     squareSprite: false
@@ -142,7 +142,7 @@
     }
 
     requirements: [
-        { item: copper, amount: 150 }
+        { item: lead, amount: 150 }
         { item: sigraph, amount: 80 }
         { item: titanium, amount: 80 }
     ]
@@ -150,7 +150,7 @@
     shootSound: shootSalvo
     research: {
     	researchCostMultiplier: 0.4
-        parent: tech-wi
+        parent: category-a4-turret
         objectives: [ salvo ]
     }
 }

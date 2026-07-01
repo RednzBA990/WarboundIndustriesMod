@@ -11,6 +11,10 @@
     },
   {
     "type": "DrawLiquidTile",
+    "drawLiquid": "liquid-a1-minerial"
+  },
+  {
+    "type": "DrawLiquidTile",
     "drawLiquid": "water"
   },
   {
@@ -31,19 +35,17 @@
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
-	"attribute": "sand",
 	"liquidCapacity": 90,
 	"itemCapacity": 70,
-	"craftTime": 4,
-	"craftEffect": "smeltsmoke",
+	"craftTime": 6,
     "ambientSound": "loopExtract",
     "ambientSoundVolume": 4,
 	"consumes": {
 		"power": 6,
-        "liquid": {
-			"liquid": "water",
-			"amount": 1
-		}
+        "liquids": [
+			"water/1",
+			"liquid-a1-minerial/0.6"
+		]
 	},
 		"results": [
 		"copper/6",
@@ -60,7 +62,7 @@
         "titarium/200",
         "plastanium/100"
 	],
-	"category": "crafting",
+	"category": "production",
 	"research": {
 		"researchCostMultiplier": 0.4,
 		"parent": "o1-resource-extractor"

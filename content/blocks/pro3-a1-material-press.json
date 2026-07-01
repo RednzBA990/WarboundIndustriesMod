@@ -1,0 +1,19 @@
+{
+  "name": "Material Press",
+  "size": 1,
+  "category": "production",
+  "hasPower": true,
+  "hasItems": false,
+  "itemCapacity": 0,
+  "buildTime": 72,
+  "craftTime": 1260,
+  "consumes": {
+    "power": 0.5
+  },
+  "requirements": [
+    "copper/50",
+    "lead/30",
+    "sigraph/15"
+  ],
+  "buildVisibility": "shown"
+}

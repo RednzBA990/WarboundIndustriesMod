@@ -13,7 +13,8 @@
     [
     	"copper/100",
 		"lead/80",
-		"graphite/50"
+		"graphite/60",
+		"titanium/40"
 	],
     "category": "distribution",
 
@@ -23,10 +24,14 @@
     "hasLiquids": false,
     "consumes":
     {
-        "power": 0.5
+        "power": 0.5,
+        "liquid": {
+			"liquid": "water",
+			"amount": 0.6
+		}
   }
     "research": {
- 	 "parent": "tech-wi",
+ 	 "parent": "category-a2-distribution",
  	 "researchCostMultiplier": 0.4,
  	 "objectives": [
  			"container",

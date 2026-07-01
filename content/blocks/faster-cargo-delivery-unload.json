@@ -5,10 +5,9 @@
 
     "size": 2,
     "health": 200,
-
-	"unitType": "surg",
+    
     "itemCapacity": 200,
-    "liquidCapacity": 0,
+    "liquidCapacity": 600,
     "separateItemCapacity": true,
     "requirements": 
     [
@@ -17,12 +16,11 @@
 		"graphite/60"
 	],
     "category": "distribution",
-    "speed": 4,
 
     "hasItems": true,
-    "hasLiquids": false,
-    "outputsLiquid": false,
-    "outputItems": true,
+    "hasLiquids": true,
+    "outputsLiquid": true,
+    "update": true,
     "buildTime": 200,
 
     "research": {

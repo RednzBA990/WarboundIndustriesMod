@@ -1,0 +1,8 @@
+{
+"type": "Floor",
+"name": "Sonim",
+"variants": 4,
+"attributes": {
+  "high-mineral": 0.5
+	}
+}

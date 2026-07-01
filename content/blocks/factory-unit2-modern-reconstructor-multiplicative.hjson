@@ -20,6 +20,7 @@ upgrades: [
 research: {
 researchCostMultiplier: 0.5
 parent: wi-factory-unit2-modern-reconstructor-aditive
+objectives: [ multiplicative-reconstructor]
 	}
 requirements: [
 lead/2300

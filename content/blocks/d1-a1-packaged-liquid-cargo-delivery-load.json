@@ -1,0 +1,38 @@
+{
+    "type": "UnitCargoLoader",
+    "name": "Packaged Liquid Drone Loader",
+    "description": "Constructs Packaged Liquid cargo drones. Drones automatically distribute items to Unloading Points with a matching filter. Only accept Packaged Liquid.",
+
+    "size": 2,
+    "health": 180,
+
+    "unitType": "unitd-a1-ackdro",
+    
+    "itemCapacity": 17,
+    "configurable": true,
+    "saveConfig": true,
+    "copyConfig": true,
+    "allowConfigInventory": false,
+    "unloadable": false,
+    "update": true,
+    "requirements": 
+    [
+		"graphite/85",
+		"metaglass/50",
+		"titanium/35"
+	],
+    "category": "liquid",
+
+    "buildTime": 96,
+	"hasPower": true,
+    "hasItems": true,
+    "hasLiquids": true,
+    "liquidCapacity": 700
+    "consumes":
+    {
+        "power": 1
+  },
+    "research": {
+ 	 "parent": "category-a5-liquid"
+	}
+}

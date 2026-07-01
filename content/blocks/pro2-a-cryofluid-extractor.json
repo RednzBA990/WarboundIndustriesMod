@@ -19,9 +19,7 @@
   },
   {
     "type": "DrawLiquidTile",
-    "drawLiquid": "cryofluid",
-    "drawLiquidLight": true,
-    "suffix": "-liquid"
+    "drawLiquid": "cryofluid"
   },
   {
     "type": "DrawRegion",
@@ -41,7 +39,7 @@
 	},
   "hasPower": true,
   "hasItems": true,
-  "hasLiquid": true,
+  "hasLiquids": true,
   "consumes": {
     "power": 2,
     "items": [
@@ -50,12 +48,11 @@
 	},
   "updateEffect": "none",
   "category": "production",
-  "idleSoundVolume": 0.5,
   "liquidCapacity": 60,
   "craftTime": 60,
   "research": {
 		"researchCostMultiplier": 0.3,
-		"parent": "pro1-a-advanced-water-extractor",
+		"parent": "category-a3-drill",
 		"objectives": [
 			"cryofluid",
 			"conduit"

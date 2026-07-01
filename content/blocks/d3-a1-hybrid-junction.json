@@ -1,0 +1,23 @@
+{
+ "type": "LiquidJunction", 
+ "name": "Hybrid Junction",  
+ "health": 60, 
+ "speed": 40.0, 
+ "capacity": 15,
+ "buildTime": 36,
+ "outputsLiquid": true,
+ "alwaysReplace": true,
+ "update": true,
+ "size": 1, 
+ "requirements": [
+	"graphite/8",
+	"metaglass/8",
+	"silicon/4"
+ ], 
+ "research": {
+		"researchCostMultiplier": 0.5,
+		"parent": "category-a5-liquid",
+		"objectives": [ "junction", "liquid-junction" ]
+   },
+ "category": "liquid"
+ }

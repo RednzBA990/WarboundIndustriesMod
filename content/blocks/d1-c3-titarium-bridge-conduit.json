@@ -15,7 +15,7 @@
     "category": "liquid",
     "research": {
     	"researchCostMultiplier": 0.5,
-		"parent": "tech-wi",
+		"parent": "d3-a1-hybrid-junction",
 		"objectives": [
 			"bridge-conduit",
 			"pulse-conduit"
