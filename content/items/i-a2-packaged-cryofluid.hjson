@@ -1,8 +1,0 @@
-type: material
-name: Packaged Cryofluid
-cost: 0.4
-color: 87CEEB
-heatCapacity: 0.9
-viscosity: 0.5
-temperature: 0.25
-research: i-a1-packaged-water
