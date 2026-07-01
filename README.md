@@ -1,4 +1,4 @@
-<img width="1280" height="640" alt="162576" src="https://github.com/user-attachments/assets/6fc11534-c73d-4575-8a0c-d5fd34667f75" />
+<img width="1280" height="640" alt="182997" src="https://github.com/user-attachments/assets/e731bd85-b945-493b-9742-e3049ed3472b" />
 
 ## WarboundIndustries Mod✨
 Redefining Industrial Warfare and Logistics Efficiency.
@@ -16,6 +16,7 @@ Adding more crafters, distribution blocks, drills, items, and new units(include 
 The mod supports:
 - **English**
 - **Bahasa Indonesia**
+- **Rusia**
 
 ### Thank You for Download!
 <img width="498" height="498" alt="160761" src="https://github.com/user-attachments/assets/2de77bba-1616-486a-8692-525fe5da5301" />
