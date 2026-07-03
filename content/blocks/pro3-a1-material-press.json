@@ -15,5 +15,9 @@
     "lead/30",
     "sigraph/15"
   ],
-  "buildVisibility": "shown"
+  "buildVisibility": "shown",
+  "research": {
+		"researchCostMultiplier": 0.5,
+		"parent": "o1-resource-extractor"
+   }
 }

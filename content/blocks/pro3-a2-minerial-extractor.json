@@ -44,7 +44,6 @@
   "category": "production",
   "research": {
 		"researchCostMultiplier": 0.5,
-		"parent": "category-a3-drill",
-		"objectives": [ "pro3-a1-material-press" ]
+		"parent": "pro3-a1-material-press"
    }
 }
