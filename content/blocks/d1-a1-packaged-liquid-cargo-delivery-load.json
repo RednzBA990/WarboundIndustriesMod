@@ -12,7 +12,6 @@
     "configurable": true,
     "saveConfig": true,
     "copyConfig": true,
-    "allowConfigInventory": false,
     "unloadable": false,
     "update": true,
     "requirements": 
