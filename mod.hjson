@@ -19,6 +19,8 @@ Slyly [ DC: @tnmspiroctsub ] = Content balancer
 Adding new Assault unit, Support unit, and Industries!
 THIS MOD IS SERPULO ONLY
 
+THIS JAVASCRIPT MOD, SO NOT SUPPORT IOSSS
+
 This mod supports English, Bahasa Indonesia, and Russian.
 
 [#FFB600[]]BUILD[#AEAEAE[]] - [#FF4C00[]]EXTRACT[#AEAEAE[]] - [#FF00F6[]]CONQUER[#AEAEAE[]].
@@ -30,6 +32,6 @@ DM me or Chat me in Mindustry Official Server if you find bug!
 All name and content in this Mod its just Fiction.
   '''
   "version": 2-global-betaTest,
-  "minGameVersion": "147",
+  "minGameVersion": "159",
   "hidden": false
 }
