@@ -10,6 +10,7 @@
     "liquidCapacity": 700,
     "configurable": true,
     "saveConfig": true,
+	"allowConfigInventory": false,
     "unloadable": false,
     "requirements": 
     [
