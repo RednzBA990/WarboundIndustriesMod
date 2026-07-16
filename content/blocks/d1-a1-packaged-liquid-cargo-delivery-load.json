@@ -11,6 +11,7 @@
     "itemCapacity": 17,
     "configurable": true,
     "saveConfig": true,
+	"allowConfigInventory": false,
     "copyConfig": true,
     "unloadable": false,
     "update": true,
