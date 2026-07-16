@@ -13,19 +13,24 @@ function createLiquidItem(liquid) {
 
     var newItem = extend(Item, itemName, {
         localizedName: liquid.localizedName,
-        description: "Item form from " + liquid.localizedName + ". This item used by Liquid Delivery Drone to distribute this liquids.",
+        description: "Solidified " + liquid.localizedName + ".",
         color: liquid.color || Color.valueOf("ffffff"),
         hardness: 0,
-        explosiveness: 0,
-        flammability: 0,
+        explosiveness: liquid.explosiveness || 0,
+        flammability: (liquid.name == "slag") ? 2 : liquid.flammability || 0,
         radioactivity: 0,
         charge: 0,
         cost: 1,
-        alwaysUnlocked: false,
+        alwaysUnlocked: true,
         hidden: false,
-        buildable: false,
-        lowPriority: true
+        buildable: true
     });
+
+	const parent = Vars.content.getByName(ContentType.liquid, liquid.name);
+		if (parent != null) {
+  		  newItem.research = parent;
+	}
+
     global.wi.items[itemName] = newItem;
     return newItem;
 }
@@ -52,4 +57,5 @@ Events.on(ModContentLoadEvent, function() {
         createLiquidItem(liquid);
         createdCount++;
     }
+    print("Registry complete with " + createdCount + " liquid to be Solidified.");
 });
