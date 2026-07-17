@@ -18,8 +18,7 @@ Events.on(ContentInitEvent, () => {
                 inputAmount: 50,
                 outputAmount: 1,
                 liqId: liquid.id,
-                itemId: item.id,
-                itemNameString: item.name
+                itemId: item.id
             });
         }
     }
@@ -41,47 +40,37 @@ Events.on(ContentInitEvent, () => {
     targetBlock.configurable = true;
     targetBlock.saveConfig = true;
 
-    targetBlock.config(java.lang.String, new Cons2((build, itemNameString) => {
-        build.setupFilterByName(itemNameString);
+    targetBlock.config(java.lang.String, new Cons2((build, nameStr) => {
+        build.applyFilter(nameStr);
     }));
     targetBlock.configClear(new Cons(build => {
-        build.setupFilterByName(null);
+        build.applyFilter(null);
     }));
     
     targetBlock.buildType = () => extend(UnitCargoLoader.UnitTransportSourceBuild, targetBlock, {
-        loaderTimer: 0,
+        filterItemName: null,
+        _filteredLiqId: -1,
+        _convTimer: 0,
 
-        filteredItemName: null, 
-        itemId: -1,
-        liqId: -1,
-        
-        _conversionList: conversionList,
-        _listLength: conversionList.length,
-
-        setupFilterByName(nameStr) {
+        applyFilter(nameStr) {
             if (nameStr === null || nameStr === "") {
-                this.filteredItemName = null;
-                this.itemId = -1;
-                this.liqId = -1;
+                this.filterItemName = null;
+                this._filteredLiqId = -1;
                 return;
             }
-
-            this.filteredItemName = nameStr;
-            var itemObj = Vars.content.getByName(ContentType.item, nameStr);
-            this.itemId = itemObj === null ? -1 : itemObj.id;
-
-            for (var i = 0; i < this._listLength; i++) {
-                if (this._conversionList[i].itemId === this.itemId) {
-                    this.liqId = this._conversionList[i].liqId;
+            this.filterItemName = nameStr;
+            for (var i = 0; i < conversionList.length; i++) {
+                if (conversionList[i].item.name === nameStr) {
+                    this._filteredLiqId = conversionList[i].liqId;
                     return;
                 }
             }
-            this.liqId = -1;
+            this._filteredLiqId = -1;
         },
 
-        getItemObject() {
-            if (this.filteredItemName === null) return null;
-            return Vars.content.getByName(ContentType.item, this.filteredItemName);
+        getFilteredItem() {
+            if (this.filterItemName === null) return null;
+            return Vars.content.getByName(ContentType.item, this.filterItemName);
         },
 
         acceptItem() {
@@ -89,86 +78,70 @@ Events.on(ContentInitEvent, () => {
         },
 
         acceptLiquid(source, liquid) {
-            if (this.filteredItemName === null) return false;
             if (this.items.total() >= blockItemCapacity) return false;
+            if (this._filteredLiqId !== -1) return liquid.id === this._filteredLiqId;
+            
+            for (var i = 0; i < conversionList.length; i++) {
+                if (conversionList[i].liqId === liquid.id) return true;
+            }
+            return false;
+        },
 
-            var targetLiqId = this.liqId;
-            if (targetLiqId === -1) return false;
+        updateTile() {
+            this.super$updateTile();
+            if (!Vars.state.isPlaying() || Vars.state.isPaused()) return;
+            if (this.items.total() >= blockItemCapacity) return;
 
-            return liquid.id === targetLiqId;
+            this._convTimer += Time.delta;
+            if (this._convTimer < 1) return;
+            this._convTimer = 0;
+
+            var liquids = this.liquids;
+            var items = this.items;
+            
+            for (var i = 0; i < conversionList.length; i++) {
+                var entry = conversionList[i];
+                if (this._filteredLiqId !== -1 && entry.liqId !== this._filteredLiqId) continue;
+
+                if (liquids.get(entry.liq) >= entry.inputAmount) {
+                    liquids.remove(entry.liq, entry.inputAmount);
+                    items.add(entry.item, entry.outputAmount);
+                    if (this._filteredLiqId === -1) break;
+                }
+            }
         },
 
         buildConfiguration(table) {
             var self = this;
-            ItemSelection.buildTable(
-                table,
-                allowedItems,
-                new Prov(() => self.getItemObject()),
-                new Cons(selectedItem => {
-                    var currentObj = self.getItemObject();
-                    var nextValue = (currentObj === selectedItem) ? "" : (selectedItem === null) ? "" : selectedItem.name;
-
-                    self.configure(nextValue);
-                    self.deselect();
-                })
-            );
+            ItemSelection.buildTable(table, allowedItems, () => self.getFilteredItem(), selectedItem => {
+                var current = self.getFilteredItem();
+                var nextName = (current === selectedItem || selectedItem === null) ? "" : selectedItem.name;
+                self.configure(nextName);
+                self.deselect();
+            });
         },
 
         config() {
-            return this.filteredItemName === null ? "" : this.filteredItemName;
+            return this.filterItemName === null ? "" : this.filterItemName;
         },
         
         write(write) {
             this.super$write(write);
-            write.str(this.filteredItemName === null ? "" : this.filteredItemName);
+            write.str(this.filterItemName === null ? "" : this.filterItemName);
         },
         
         read(read, revision) {
             this.super$read(read, revision);
-            var savedName = read.str();
-            this.setupFilterByName(savedName === "" ? null : savedName);
-        },
-        
-        updateTile() {
-            this.super$updateTile();
-            
-            if (!Vars.state.isPlaying() || Vars.state.isPaused()) return;
-            if (this.filteredItemName === null) {
-                this.loaderTimer = 0;
-                return;
-            }
-            
-            this.loaderTimer += Time.delta;
-            if (this.loaderTimer < 1) return;
-            
-            var items = this.items;
-            var liquids = this.liquids;
-            var list = this._conversionList;
-            var len = this._listLength;
-            var filterLiqId = this.liqId;
-
-            for (var i = 0; i < len; i++) {
-                var entry = list[i];
-                if (entry.liqId !== filterLiqId) continue;
-
-                if (liquids.get(entry.liq) >= entry.inputAmount) {
-                    if (items.total() < blockItemCapacity) {
-                        liquids.remove(entry.liq, entry.inputAmount);
-                        items.add(entry.item, entry.outputAmount);
-                        this.loaderTimer = 0;
-                    }
-                }
-                break;
-            }
+            var saved = read.str();
+            this.applyFilter(saved === "" ? null : saved);
         },
         
         draw() {
             this.super$draw();
-
-            var currentItem = this.getItemObject();
-            if (currentItem !== null) {
+            var fi = this.getFilteredItem();
+            if (fi !== null) {
                 Draw.z(Layer.blockOver - 2);
-                Draw.color(currentItem.color);
+                Draw.color(fi.color);
                 Draw.rect(topSprite, this.x, this.y);
                 Draw.reset();
             }
