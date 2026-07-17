@@ -33,20 +33,20 @@ Events.on(ContentInitEvent, () => {
 		lastAmount: 0, 
 
 	updateTile() {
- 	   this.super$updateTile();
- 
- 	   this.liquids.updateFlow();
- 	   const totalLiq = this.liquids.sum((liq, amount) => amount);
+    this.super$updateTile();
 
- 	   const hasWater = totalLiq > 0.01;
- 	   const isFlowing = this.enabled && hasWater;
-	
- 	   if (isFlowing) {
- 	       this.flowMomentum = Mathf.lerpDelta(this.flowMomentum, 1, 0.05);
- 	   } else {
- 	       this.flowMomentum = Mathf.lerpDelta(this.flowMomentum, 0, 0.1);
- 	   }
- 	   this.rotorRotation += this.flowMomentum * 15 * Time.delta;
+    const currentTotal = this.liquids.sum((liq, amount) => amount);
+    const flowDelta = Math.abs(currentTotal - this.lastAmount);
+    this.lastAmount = currentTotal;
+    const isFlowing = flowDelta > 0.001 && this.enabled;
+
+    if (isFlowing) {
+        this.flowMomentum = Mathf.lerpDelta(this.flowMomentum, 1, 0.1);
+    } else {
+        this.flowMomentum = Mathf.lerpDelta(this.flowMomentum, 0, 0.05);
+    }
+    
+    this.rotorRotation += this.flowMomentum * 15 * Time.delta;
 	},
 
         getPowerProduction() {
