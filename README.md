@@ -14,9 +14,10 @@ Adding more crafters, distribution blocks, drills, items, and new units(include 
 
 ### Supported Languages
 The mod supports:
-- **English**
-- **Bahasa Indonesia**
-- **Rusia**
+- **English** by Renn
+- **Bahasa Indonesia** by Renn
+- **Rusia** by Blazing Gear
+- **Spanish** by DaniZZQ
 
 ### Thank You for Download!
 <img width="498" height="498" alt="160761" src="https://github.com/user-attachments/assets/2de77bba-1616-486a-8692-525fe5da5301" />
